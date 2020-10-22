@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module generateOverchargedConstructor('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateOverchargedConstructor(aClase : Clase)]
+
+[/template]
