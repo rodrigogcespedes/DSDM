@@ -1,0 +1,46 @@
+[comment encoding = UTF-8 /]
+[module generateServices('http://www.example.org/diagramaClasesCompleto')]
+[import AcceleoJavaSpring::services::generateBaseService/]
+
+[template public generateServices(raiz : DiagramaClases)]
+
+
+
+[for (paquete : Package | raiz.packages_contenidos)]
+	
+
+[for (clase : Clase | paquete.clasificadores_contenidos->filter(Clase))]
+[file ('src/main/java/com/example/demo/services/'+clase.nombre+'Service.java', false, 'UTF-8')]
+package com.example.demo.services;
+import com.example.demo.entities.[paquete.nombre/].[clase.nombre/];
+
+public Interface [clase.nombre/]Service extends BaseService<[clase.nombre/],Long>{
+}
+
+[/file]
+
+[file ('src/main/java/com/example/demo/services/'+clase.nombre+'ServiceImpl.java', false, 'UTF-8')]
+package com.example.demo.services;
+
+import com.example.primera.entities.[paquete.nombre/].[clase.nombre/];
+import com.example.primera.repositories.BaseRepository;
+import com.example.primera.repositories.[clase.nombre/]Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+public class [clase.nombre/]ServiceImpl extends BaseServiceImpl<[clase.nombre/],Long> implements [clase.nombre/]Service{
+
+	@Autowired
+	private [clase.nombre/]Repository [clase.nombre/]Repository;
+
+	public [clase.nombre/]ServiceImpl(BaseRepository<[clase.nombre/], Long> baseRepository){
+        super(baseRepository);
+    }
+}
+
+
+[/file]
+
+[/for]
+[/for]
+[/template]
