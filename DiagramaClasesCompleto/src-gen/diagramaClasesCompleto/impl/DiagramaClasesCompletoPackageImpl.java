@@ -1832,7 +1832,6 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		initEEnum(tipoABMEEnum, TipoABM.class, "TipoABM");
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SIMPLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SELECCIONABLE);
-		addEEnumLiteral(tipoABMEEnum, TipoABM.EDITABLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE_COMBO);
 

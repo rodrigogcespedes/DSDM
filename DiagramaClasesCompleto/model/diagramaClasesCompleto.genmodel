@@ -77,6 +77,19 @@
       <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//Lenguaje/NET"/>
       <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//Lenguaje/node"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diagramaClasesCompleto.ecore#//RepresentacionGrafica">
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//RepresentacionGrafica/text"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//RepresentacionGrafica/combo"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//RepresentacionGrafica/radio"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//RepresentacionGrafica/checkbox"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//RepresentacionGrafica/date"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diagramaClasesCompleto.ecore#//TipoABM">
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/simple"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/seleccionable"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/maestroDetalle"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/maestroDetalleCombo"/>
+    </genEnums>
     <genClasses ecoreClass="diagramaClasesCompleto.ecore#//DiagramaClases">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagramaClasesCompleto.ecore#//DiagramaClases/packages_contenidos"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagramaClasesCompleto.ecore#//DiagramaClases/artefacto_contenido"/>
@@ -110,6 +123,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/esFinal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/esStatic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/visibilidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/tipoABM"/>
     </genClasses>
     <genClasses ecoreClass="diagramaClasesCompleto.ecore#//Operacion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Operacion/tipoRetorno"/>
@@ -122,6 +136,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Atributo/tipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Atributo/esAuditable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Atributo/pseudonimo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Atributo/representacionGrafica"/>
     </genClasses>
     <genClasses ecoreClass="diagramaClasesCompleto.ecore#//Package">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagramaClasesCompleto.ecore#//Package/clasificadores_contenidos"/>

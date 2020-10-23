@@ -215,7 +215,6 @@
   <eClassifiers xsi:type="ecore:EEnum" name="TipoABM">
     <eLiterals name="simple"/>
     <eLiterals name="seleccionable" value="1"/>
-    <eLiterals name="editable" value="2"/>
     <eLiterals name="maestroDetalle" value="3"/>
     <eLiterals name="maestroDetalleCombo" value="4"/>
   </eClassifiers>

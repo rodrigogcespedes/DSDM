@@ -39,16 +39,6 @@ public enum TipoABM implements Enumerator {
 	SELECCIONABLE(1, "seleccionable", "seleccionable"),
 
 	/**
-	 * The '<em><b>Editable</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EDITABLE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	EDITABLE(2, "editable", "editable"),
-
-	/**
 	 * The '<em><b>Maestro Detalle</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,17 +81,6 @@ public enum TipoABM implements Enumerator {
 	public static final int SELECCIONABLE_VALUE = 1;
 
 	/**
-	 * The '<em><b>Editable</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EDITABLE
-	 * @model name="editable"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int EDITABLE_VALUE = 2;
-
-	/**
 	 * The '<em><b>Maestro Detalle</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +108,7 @@ public enum TipoABM implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final TipoABM[] VALUES_ARRAY = new TipoABM[] { SIMPLE, SELECCIONABLE, EDITABLE, MAESTRO_DETALLE,
+	private static final TipoABM[] VALUES_ARRAY = new TipoABM[] { SIMPLE, SELECCIONABLE, MAESTRO_DETALLE,
 			MAESTRO_DETALLE_COMBO, };
 
 	/**
@@ -190,8 +169,6 @@ public enum TipoABM implements Enumerator {
 			return SIMPLE;
 		case SELECCIONABLE_VALUE:
 			return SELECCIONABLE;
-		case EDITABLE_VALUE:
-			return EDITABLE;
 		case MAESTRO_DETALLE_VALUE:
 			return MAESTRO_DETALLE;
 		case MAESTRO_DETALLE_COMBO_VALUE:
