@@ -47,6 +47,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esFinal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//ModicadoresAcceso"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoABM" eType="#//TipoABM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operacion" eSuperTypes="#//Retornable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoRetorno" eType="#//TipoRetorno"/>
@@ -64,6 +65,8 @@
         defaultValueLiteral="int"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esAuditable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudonimo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="representacionGrafica"
+        eType="#//RepresentacionGrafica"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoRelacion">
     <eLiterals name="unidireccional"/>
@@ -201,5 +204,18 @@
         defaultValueLiteral="http://localhost"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="puertoDiscovery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="8761"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RepresentacionGrafica">
+    <eLiterals name="text"/>
+    <eLiterals name="combo" value="1"/>
+    <eLiterals name="radio" value="2"/>
+    <eLiterals name="checkbox" value="3"/>
+    <eLiterals name="date" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoABM">
+    <eLiterals name="simple"/>
+    <eLiterals name="seleccionable" value="1"/>
+    <eLiterals name="maestroDetalle" value="3"/>
+    <eLiterals name="maestroDetalleCombo" value="4"/>
   </eClassifiers>
 </ecore:EPackage>
