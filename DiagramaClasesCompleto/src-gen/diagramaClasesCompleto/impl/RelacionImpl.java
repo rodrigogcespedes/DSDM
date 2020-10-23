@@ -8,6 +8,7 @@ import diagramaClasesCompleto.DiagramaClasesCompletoPackage;
 import diagramaClasesCompleto.ModicadoresAcceso;
 import diagramaClasesCompleto.Multiplicidad;
 import diagramaClasesCompleto.Relacion;
+import diagramaClasesCompleto.TipoABM;
 import diagramaClasesCompleto.TipoRelacion;
 
 import java.util.Collection;
@@ -43,6 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#isEsFinal <em>Es Final</em>}</li>
  *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#isEsStatic <em>Es Static</em>}</li>
  *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#getVisibilidad <em>Visibilidad</em>}</li>
+ *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#getTipoABM <em>Tipo ABM</em>}</li>
  * </ul>
  *
  * @generated
@@ -197,6 +199,26 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @ordered
 	 */
 	protected ModicadoresAcceso visibilidad = VISIBILIDAD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTipoABM() <em>Tipo ABM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTipoABM()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TipoABM TIPO_ABM_EDEFAULT = TipoABM.SIMPLE;
+
+	/**
+	 * The cached value of the '{@link #getTipoABM() <em>Tipo ABM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTipoABM()
+	 * @generated
+	 * @ordered
+	 */
+	protected TipoABM tipoABM = TIPO_ABM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -465,6 +487,30 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @generated
 	 */
 	@Override
+	public TipoABM getTipoABM() {
+		return tipoABM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTipoABM(TipoABM newTipoABM) {
+		TipoABM oldTipoABM = tipoABM;
+		tipoABM = newTipoABM == null ? TIPO_ABM_EDEFAULT : newTipoABM;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DiagramaClasesCompletoPackage.RELACION__TIPO_ABM,
+					oldTipoABM, tipoABM));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiagramaClasesCompletoPackage.RELACION__CLASES_ASOCIATIVAS_CONTENIDAS:
@@ -503,6 +549,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 			return isEsStatic();
 		case DiagramaClasesCompletoPackage.RELACION__VISIBILIDAD:
 			return getVisibilidad();
+		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
+			return getTipoABM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -544,6 +592,9 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		case DiagramaClasesCompletoPackage.RELACION__VISIBILIDAD:
 			setVisibilidad((ModicadoresAcceso) newValue);
 			return;
+		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
+			setTipoABM((TipoABM) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -583,6 +634,9 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		case DiagramaClasesCompletoPackage.RELACION__VISIBILIDAD:
 			setVisibilidad(VISIBILIDAD_EDEFAULT);
 			return;
+		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
+			setTipoABM(TIPO_ABM_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -613,6 +667,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 			return esStatic != ES_STATIC_EDEFAULT;
 		case DiagramaClasesCompletoPackage.RELACION__VISIBILIDAD:
 			return visibilidad != VISIBILIDAD_EDEFAULT;
+		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
+			return tipoABM != TIPO_ABM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -640,6 +696,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		result.append(esStatic);
 		result.append(", visibilidad: ");
 		result.append(visibilidad);
+		result.append(", tipoABM: ");
+		result.append(tipoABM);
 		result.append(')');
 		return result.toString();
 	}

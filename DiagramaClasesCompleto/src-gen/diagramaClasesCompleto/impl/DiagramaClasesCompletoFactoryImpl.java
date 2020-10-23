@@ -23,6 +23,8 @@ import diagramaClasesCompleto.ParametroInterno;
 import diagramaClasesCompleto.ProveedorDb;
 import diagramaClasesCompleto.Realizacion;
 import diagramaClasesCompleto.Relacion;
+import diagramaClasesCompleto.RepresentacionGrafica;
+import diagramaClasesCompleto.TipoABM;
 import diagramaClasesCompleto.TipoDato;
 import diagramaClasesCompleto.TipoReinicio;
 import diagramaClasesCompleto.TipoRelacion;
@@ -148,6 +150,10 @@ public class DiagramaClasesCompletoFactoryImpl extends EFactoryImpl implements D
 			return createProveedorDbFromString(eDataType, initialValue);
 		case DiagramaClasesCompletoPackage.LENGUAJE:
 			return createLenguajeFromString(eDataType, initialValue);
+		case DiagramaClasesCompletoPackage.REPRESENTACION_GRAFICA:
+			return createRepresentacionGraficaFromString(eDataType, initialValue);
+		case DiagramaClasesCompletoPackage.TIPO_ABM:
+			return createTipoABMFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -181,6 +187,10 @@ public class DiagramaClasesCompletoFactoryImpl extends EFactoryImpl implements D
 			return convertProveedorDbToString(eDataType, instanceValue);
 		case DiagramaClasesCompletoPackage.LENGUAJE:
 			return convertLenguajeToString(eDataType, instanceValue);
+		case DiagramaClasesCompletoPackage.REPRESENTACION_GRAFICA:
+			return convertRepresentacionGraficaToString(eDataType, instanceValue);
+		case DiagramaClasesCompletoPackage.TIPO_ABM:
+			return convertTipoABMToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -579,6 +589,50 @@ public class DiagramaClasesCompletoFactoryImpl extends EFactoryImpl implements D
 	 * @generated
 	 */
 	public String convertLenguajeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RepresentacionGrafica createRepresentacionGraficaFromString(EDataType eDataType, String initialValue) {
+		RepresentacionGrafica result = RepresentacionGrafica.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRepresentacionGraficaToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TipoABM createTipoABMFromString(EDataType eDataType, String initialValue) {
+		TipoABM result = TipoABM.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTipoABMToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -24,7 +24,9 @@ import diagramaClasesCompleto.ParametroInterno;
 import diagramaClasesCompleto.ProveedorDb;
 import diagramaClasesCompleto.Realizacion;
 import diagramaClasesCompleto.Relacion;
+import diagramaClasesCompleto.RepresentacionGrafica;
 import diagramaClasesCompleto.Retornable;
+import diagramaClasesCompleto.TipoABM;
 import diagramaClasesCompleto.TipoDato;
 import diagramaClasesCompleto.TipoReinicio;
 import diagramaClasesCompleto.TipoRelacion;
@@ -242,6 +244,20 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 	 * @generated
 	 */
 	private EEnum lenguajeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum representacionGraficaEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum tipoABMEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -614,6 +630,16 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRelacion_TipoABM() {
+		return (EAttribute) relacionEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getOperacion() {
 		return operacionEClass;
 	}
@@ -706,6 +732,16 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 	@Override
 	public EAttribute getAtributo_Pseudonimo() {
 		return (EAttribute) atributoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAtributo_RepresentacionGrafica() {
+		return (EAttribute) atributoEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1274,6 +1310,26 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 	 * @generated
 	 */
 	@Override
+	public EEnum getRepresentacionGrafica() {
+		return representacionGraficaEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getTipoABM() {
+		return tipoABMEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public DiagramaClasesCompletoFactory getDiagramaClasesCompletoFactory() {
 		return (DiagramaClasesCompletoFactory) getEFactoryInstance();
 	}
@@ -1332,6 +1388,7 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		createEAttribute(relacionEClass, RELACION__ES_FINAL);
 		createEAttribute(relacionEClass, RELACION__ES_STATIC);
 		createEAttribute(relacionEClass, RELACION__VISIBILIDAD);
+		createEAttribute(relacionEClass, RELACION__TIPO_ABM);
 
 		operacionEClass = createEClass(OPERACION);
 		createEAttribute(operacionEClass, OPERACION__TIPO_RETORNO);
@@ -1344,6 +1401,7 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		createEAttribute(atributoEClass, ATRIBUTO__TIPO);
 		createEAttribute(atributoEClass, ATRIBUTO__ES_AUDITABLE);
 		createEAttribute(atributoEClass, ATRIBUTO__PSEUDONIMO);
+		createEAttribute(atributoEClass, ATRIBUTO__REPRESENTACION_GRAFICA);
 
 		packageEClass = createEClass(PACKAGE);
 		createEReference(packageEClass, PACKAGE__CLASIFICADORES_CONTENIDOS);
@@ -1413,6 +1471,8 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		tipoReinicioEEnum = createEEnum(TIPO_REINICIO);
 		proveedorDbEEnum = createEEnum(PROVEEDOR_DB);
 		lenguajeEEnum = createEEnum(LENGUAJE);
+		representacionGraficaEEnum = createEEnum(REPRESENTACION_GRAFICA);
+		tipoABMEEnum = createEEnum(TIPO_ABM);
 	}
 
 	/**
@@ -1529,6 +1589,8 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		initEAttribute(getRelacion_Visibilidad(), this.getModicadoresAcceso(), "visibilidad", null, 0, 1,
 				Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", null, 0, 1, Relacion.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operacionEClass, Operacion.class, "Operacion", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1555,6 +1617,9 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAtributo_Pseudonimo(), ecorePackage.getEString(), "pseudonimo", null, 0, 1, Atributo.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtributo_RepresentacionGrafica(), this.getRepresentacionGrafica(), "representacionGrafica",
+				null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(packageEClass, diagramaClasesCompleto.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1756,6 +1821,20 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		addEEnumLiteral(lenguajeEEnum, Lenguaje.PYTHON);
 		addEEnumLiteral(lenguajeEEnum, Lenguaje.NET);
 		addEEnumLiteral(lenguajeEEnum, Lenguaje.NODE);
+
+		initEEnum(representacionGraficaEEnum, RepresentacionGrafica.class, "RepresentacionGrafica");
+		addEEnumLiteral(representacionGraficaEEnum, RepresentacionGrafica.TEXT);
+		addEEnumLiteral(representacionGraficaEEnum, RepresentacionGrafica.COMBO);
+		addEEnumLiteral(representacionGraficaEEnum, RepresentacionGrafica.RADIO);
+		addEEnumLiteral(representacionGraficaEEnum, RepresentacionGrafica.CHECKBOX);
+		addEEnumLiteral(representacionGraficaEEnum, RepresentacionGrafica.DATE);
+
+		initEEnum(tipoABMEEnum, TipoABM.class, "TipoABM");
+		addEEnumLiteral(tipoABMEEnum, TipoABM.SIMPLE);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.SELECCIONABLE);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.EDITABLE);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE_COMBO);
 
 		// Create resource
 		createResource(eNS_URI);

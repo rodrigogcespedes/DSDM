@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagramaClasesCompleto.Relacion#isEsFinal <em>Es Final</em>}</li>
  *   <li>{@link diagramaClasesCompleto.Relacion#isEsStatic <em>Es Static</em>}</li>
  *   <li>{@link diagramaClasesCompleto.Relacion#getVisibilidad <em>Visibilidad</em>}</li>
+ *   <li>{@link diagramaClasesCompleto.Relacion#getTipoABM <em>Tipo ABM</em>}</li>
  * </ul>
  *
  * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion()
@@ -227,5 +228,30 @@ public interface Relacion extends EObject {
 	 * @generated
 	 */
 	void setVisibilidad(ModicadoresAcceso value);
+
+	/**
+	 * Returns the value of the '<em><b>Tipo ABM</b></em>' attribute.
+	 * The literals are from the enumeration {@link diagramaClasesCompleto.TipoABM}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tipo ABM</em>' attribute.
+	 * @see diagramaClasesCompleto.TipoABM
+	 * @see #setTipoABM(TipoABM)
+	 * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion_TipoABM()
+	 * @model
+	 * @generated
+	 */
+	TipoABM getTipoABM();
+
+	/**
+	 * Sets the value of the '{@link diagramaClasesCompleto.Relacion#getTipoABM <em>Tipo ABM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tipo ABM</em>' attribute.
+	 * @see diagramaClasesCompleto.TipoABM
+	 * @see #getTipoABM()
+	 * @generated
+	 */
+	void setTipoABM(TipoABM value);
 
 } // Relacion
