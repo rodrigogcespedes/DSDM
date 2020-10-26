@@ -47,8 +47,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esFinal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="esStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//ModicadoresAcceso"/>
+<<<<<<< HEAD
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoABM" eType="#//TipoABM"
         defaultValueLiteral="sinRepresentacion"/>
+=======
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoABM" eType="#//TipoABM"/>
+>>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operacion" eSuperTypes="#//Retornable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoRetorno" eType="#//TipoRetorno"/>
@@ -218,7 +222,10 @@
     <eLiterals name="seleccionable" value="1"/>
     <eLiterals name="maestroDetalle" value="3"/>
     <eLiterals name="maestroDetalleCombo" value="4"/>
+<<<<<<< HEAD
     <eLiterals name="sinRepresentacion" value="4"/>
     <eLiterals name="maestroConDetalleMultiple" value="5"/>
+=======
+>>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
   </eClassifiers>
 </ecore:EPackage>

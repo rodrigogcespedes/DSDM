@@ -1589,8 +1589,13 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		initEAttribute(getRelacion_Visibilidad(), this.getModicadoresAcceso(), "visibilidad", null, 0, 1,
 				Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+<<<<<<< HEAD
 		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", "sinRepresentacion", 0, 1, Relacion.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+=======
+		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", null, 0, 1, Relacion.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+>>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 
 		initEClass(operacionEClass, Operacion.class, "Operacion", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1834,8 +1839,11 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SELECCIONABLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE_COMBO);
+<<<<<<< HEAD
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SIN_REPRESENTACION);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_CON_DETALLE_MULTIPLE);
+=======
+>>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 
 		// Create resource
 		createResource(eNS_URI);
