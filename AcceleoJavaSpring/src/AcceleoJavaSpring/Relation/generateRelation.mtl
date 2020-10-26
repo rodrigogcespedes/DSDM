@@ -3,10 +3,16 @@
 [import AcceleoJavaSpring::Relation::generateRelationNotation/]
 [import AcceleoJavaSpring::Entity::generateAssociativeClass /]
 
-[template public generateRelation(a : Clase, paquete : Package)]
+[template public generateRelation(a : Clase, paquete : Package, d: DiagramaClases)]
 
 [for (i : Relacion | a.relaciones_contenidas)]
-[if (not i.clases_asociativas_contenidas->isEmpty())][generateAssociativeClass(i, paquete)/][/if]
+
+[if (not i.clases_asociativas_contenidas->isEmpty())]
+	[for (c : Clase | i.clases_asociativas_contenidas)]
+			[generateAssociativeClass(i, paquete, d)/]
+	[/for]
+[/if]
+
 [if (i.tipo=TipoRelacion::unidireccional)]
 
 	[if (i.multiplicidad=Multiplicidad::oneToOne)]

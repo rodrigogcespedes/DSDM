@@ -4,7 +4,7 @@
 
 [template public generateBaseEntity(aDiagramaClases : DiagramaClases)]
 
-[file ('src/main/java/'+aDiagramaClases.artefacto_contenido.grupoId.replace('.', '/')+'/'+aDiagramaClases.artefacto_contenido.artefactotId+'/entities/Base.java', false, 'UTF-8')]
+[file ('src/main/java/'+aDiagramaClases.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+aDiagramaClases.artefacto_contenido.artefactotId+'/entities/Base.java', false, 'UTF-8')]
 package [aDiagramaClases.artefacto_contenido.grupoId/].[aDiagramaClases.artefacto_contenido.artefactotId/].entities;
 
 import lombok.Getter;

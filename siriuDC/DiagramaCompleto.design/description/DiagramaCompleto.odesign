@@ -361,24 +361,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ClaseAsociativa1" containerMappings="//@ownedViewpoints[name='DiagramaUTN']/@ownedRepresentations[name='DiagramaDeClases']/@defaultLayer/@containerMappings[name='Paquete']/@subContainerMappings[name='Clase']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="diagramaClasesCompleto::Clase" referenceName="clasificadores_contenidos">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="['Clase' + Clase.allInstances()->size()/]"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="esAsociativa" valueExpression="true"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ClaseAsociativa">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ClaseAsociativa" edgeMappings="//@ownedViewpoints[name='DiagramaUTN']/@ownedRepresentations[name='DiagramaDeClases']/@defaultLayer/@edgeMappings[name='Asociativa']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diagramaClasesCompleto::Clase" referenceName="clasificadores_contenidos">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diagramaClasesCompleto::Clase" referenceName="clases_asociativas_contenidas">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="['Clase' + Clase.allInstances()->size()/]"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="esAsociativa" valueExpression="true"/>
                 </subModelOperations>

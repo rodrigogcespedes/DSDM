@@ -6,18 +6,23 @@
 
 
 [for (paquete : Package | raiz.packages_contenidos)]
-	block_expression
+	
 
 [for (clase : Clase | paquete.clasificadores_contenidos->filter(Clase))]
 
-[file ('src/main/java/com/example/demo/repositories/'+clase.nombre+'Repository.java', false, 'UTF-8')]
-package com.example.demo.repositories;
-import com.example.demo.entities.[paquete.nombre/].[clase.nombre/];
+[if (clase.tieneABM)]
 
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.replace('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/repositories/'+clase.nombre+'Repository.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactoId/].repositories;
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactoId/].entities.[paquete.nombre/].[clase.nombre/];
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface [clase.nombre/]Repository extends BaseRepository<[clase.nombre/], Long>{
 
 }
 [/file]
+[/if]
 [/for]
 [/for]
 [/template]

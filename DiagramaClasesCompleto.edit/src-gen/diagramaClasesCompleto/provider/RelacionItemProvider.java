@@ -64,6 +64,7 @@ public class RelacionItemProvider extends ItemProviderAdapter implements IEditin
 			addEsFinalPropertyDescriptor(object);
 			addEsStaticPropertyDescriptor(object);
 			addVisibilidadPropertyDescriptor(object);
+			addTipoABMPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -195,6 +196,22 @@ public class RelacionItemProvider extends ItemProviderAdapter implements IEditin
 	}
 
 	/**
+	 * This adds a property descriptor for the Tipo ABM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTipoABMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Relacion_tipoABM_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Relacion_tipoABM_feature",
+								"_UI_Relacion_type"),
+						DiagramaClasesCompletoPackage.Literals.RELACION__TIPO_ABM, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -276,6 +293,7 @@ public class RelacionItemProvider extends ItemProviderAdapter implements IEditin
 		case DiagramaClasesCompletoPackage.RELACION__ES_FINAL:
 		case DiagramaClasesCompletoPackage.RELACION__ES_STATIC:
 		case DiagramaClasesCompletoPackage.RELACION__VISIBILIDAD:
+		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case DiagramaClasesCompletoPackage.RELACION__CLASES_ASOCIATIVAS_CONTENIDAS:

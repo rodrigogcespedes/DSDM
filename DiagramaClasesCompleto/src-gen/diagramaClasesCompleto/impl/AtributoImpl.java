@@ -4,6 +4,7 @@ package diagramaClasesCompleto.impl;
 
 import diagramaClasesCompleto.Atributo;
 import diagramaClasesCompleto.DiagramaClasesCompletoPackage;
+import diagramaClasesCompleto.RepresentacionGrafica;
 import diagramaClasesCompleto.TipoDato;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link diagramaClasesCompleto.impl.AtributoImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link diagramaClasesCompleto.impl.AtributoImpl#isEsAuditable <em>Es Auditable</em>}</li>
  *   <li>{@link diagramaClasesCompleto.impl.AtributoImpl#getPseudonimo <em>Pseudonimo</em>}</li>
+ *   <li>{@link diagramaClasesCompleto.impl.AtributoImpl#getRepresentacionGrafica <em>Representacion Grafica</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,26 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 	 * @ordered
 	 */
 	protected String pseudonimo = PSEUDONIMO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRepresentacionGrafica() <em>Representacion Grafica</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepresentacionGrafica()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final RepresentacionGrafica REPRESENTACION_GRAFICA_EDEFAULT = RepresentacionGrafica.TEXT;
+
+	/**
+	 * The cached value of the '{@link #getRepresentacionGrafica() <em>Representacion Grafica</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepresentacionGrafica()
+	 * @generated
+	 * @ordered
+	 */
+	protected RepresentacionGrafica representacionGrafica = REPRESENTACION_GRAFICA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,6 +207,32 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 	 * @generated
 	 */
 	@Override
+	public RepresentacionGrafica getRepresentacionGrafica() {
+		return representacionGrafica;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRepresentacionGrafica(RepresentacionGrafica newRepresentacionGrafica) {
+		RepresentacionGrafica oldRepresentacionGrafica = representacionGrafica;
+		representacionGrafica = newRepresentacionGrafica == null ? REPRESENTACION_GRAFICA_EDEFAULT
+				: newRepresentacionGrafica;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.ATRIBUTO__REPRESENTACION_GRAFICA, oldRepresentacionGrafica,
+					representacionGrafica));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case DiagramaClasesCompletoPackage.ATRIBUTO__TIPO:
@@ -193,6 +241,8 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 			return isEsAuditable();
 		case DiagramaClasesCompletoPackage.ATRIBUTO__PSEUDONIMO:
 			return getPseudonimo();
+		case DiagramaClasesCompletoPackage.ATRIBUTO__REPRESENTACION_GRAFICA:
+			return getRepresentacionGrafica();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,6 +263,9 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 			return;
 		case DiagramaClasesCompletoPackage.ATRIBUTO__PSEUDONIMO:
 			setPseudonimo((String) newValue);
+			return;
+		case DiagramaClasesCompletoPackage.ATRIBUTO__REPRESENTACION_GRAFICA:
+			setRepresentacionGrafica((RepresentacionGrafica) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -235,6 +288,9 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 		case DiagramaClasesCompletoPackage.ATRIBUTO__PSEUDONIMO:
 			setPseudonimo(PSEUDONIMO_EDEFAULT);
 			return;
+		case DiagramaClasesCompletoPackage.ATRIBUTO__REPRESENTACION_GRAFICA:
+			setRepresentacionGrafica(REPRESENTACION_GRAFICA_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -253,6 +309,8 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 			return esAuditable != ES_AUDITABLE_EDEFAULT;
 		case DiagramaClasesCompletoPackage.ATRIBUTO__PSEUDONIMO:
 			return PSEUDONIMO_EDEFAULT == null ? pseudonimo != null : !PSEUDONIMO_EDEFAULT.equals(pseudonimo);
+		case DiagramaClasesCompletoPackage.ATRIBUTO__REPRESENTACION_GRAFICA:
+			return representacionGrafica != REPRESENTACION_GRAFICA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -274,6 +332,8 @@ public class AtributoImpl extends RetornableImpl implements Atributo {
 		result.append(esAuditable);
 		result.append(", pseudonimo: ");
 		result.append(pseudonimo);
+		result.append(", representacionGrafica: ");
+		result.append(representacionGrafica);
 		result.append(')');
 		return result.toString();
 	}

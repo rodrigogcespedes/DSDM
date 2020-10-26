@@ -11,6 +11,7 @@
 [import AcceleoJavaSpring::Entity::generateInterface /]
 [import AcceleoJavaSpring::Configurations::generatePom /]
 [import AcceleoJavaSpring::Configurations::generateAplicationProperties /]
+[import AcceleoJavaSpring::controllers::generateControllers /]
 
 [template public generateDiagrama(d : DiagramaClases)]
 [comment @main/]
@@ -18,11 +19,6 @@
 [generateInterface(d)/]
 [generateBaseEntity(d)/]
 [generateEntity(d)/]
-[generateBaseRepository(d)/]
-[generateRepositories(d)/]
-[generateBaseService(d)/]
-[generateServices(d)/]
-[generateBaseController(d)/]
 
 
 [/template]

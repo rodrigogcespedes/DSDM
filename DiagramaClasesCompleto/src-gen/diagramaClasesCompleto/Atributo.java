@@ -14,6 +14,7 @@ package diagramaClasesCompleto;
  *   <li>{@link diagramaClasesCompleto.Atributo#getTipo <em>Tipo</em>}</li>
  *   <li>{@link diagramaClasesCompleto.Atributo#isEsAuditable <em>Es Auditable</em>}</li>
  *   <li>{@link diagramaClasesCompleto.Atributo#getPseudonimo <em>Pseudonimo</em>}</li>
+ *   <li>{@link diagramaClasesCompleto.Atributo#getRepresentacionGrafica <em>Representacion Grafica</em>}</li>
  * </ul>
  *
  * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getAtributo()
@@ -90,5 +91,30 @@ public interface Atributo extends Retornable {
 	 * @generated
 	 */
 	void setPseudonimo(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Representacion Grafica</b></em>' attribute.
+	 * The literals are from the enumeration {@link diagramaClasesCompleto.RepresentacionGrafica}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Representacion Grafica</em>' attribute.
+	 * @see diagramaClasesCompleto.RepresentacionGrafica
+	 * @see #setRepresentacionGrafica(RepresentacionGrafica)
+	 * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getAtributo_RepresentacionGrafica()
+	 * @model
+	 * @generated
+	 */
+	RepresentacionGrafica getRepresentacionGrafica();
+
+	/**
+	 * Sets the value of the '{@link diagramaClasesCompleto.Atributo#getRepresentacionGrafica <em>Representacion Grafica</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Representacion Grafica</em>' attribute.
+	 * @see diagramaClasesCompleto.RepresentacionGrafica
+	 * @see #getRepresentacionGrafica()
+	 * @generated
+	 */
+	void setRepresentacionGrafica(RepresentacionGrafica value);
 
 } // Atributo

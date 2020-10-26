@@ -477,13 +477,22 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int RELACION__VISIBILIDAD = 8;
 
 	/**
+	 * The feature id for the '<em><b>Tipo ABM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELACION__TIPO_ABM = 9;
+
+	/**
 	 * The number of structural features of the '<em>Relacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELACION_FEATURE_COUNT = 9;
+	int RELACION_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Relacion</em>' class.
@@ -741,13 +750,22 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int ATRIBUTO__PSEUDONIMO = RETORNABLE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Representacion Grafica</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO__REPRESENTACION_GRAFICA = RETORNABLE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = RETORNABLE_FEATURE_COUNT + 3;
+	int ATRIBUTO_FEATURE_COUNT = RETORNABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -1418,6 +1436,26 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int LENGUAJE = 27;
 
 	/**
+	 * The meta object id for the '{@link diagramaClasesCompleto.RepresentacionGrafica <em>Representacion Grafica</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagramaClasesCompleto.RepresentacionGrafica
+	 * @see diagramaClasesCompleto.impl.DiagramaClasesCompletoPackageImpl#getRepresentacionGrafica()
+	 * @generated
+	 */
+	int REPRESENTACION_GRAFICA = 28;
+
+	/**
+	 * The meta object id for the '{@link diagramaClasesCompleto.TipoABM <em>Tipo ABM</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagramaClasesCompleto.TipoABM
+	 * @see diagramaClasesCompleto.impl.DiagramaClasesCompletoPackageImpl#getTipoABM()
+	 * @generated
+	 */
+	int TIPO_ABM = 29;
+
+	/**
 	 * Returns the meta object for class '{@link diagramaClasesCompleto.DiagramaClases <em>Diagrama Clases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1743,6 +1781,17 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	EAttribute getRelacion_Visibilidad();
 
 	/**
+	 * Returns the meta object for the attribute '{@link diagramaClasesCompleto.Relacion#getTipoABM <em>Tipo ABM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tipo ABM</em>'.
+	 * @see diagramaClasesCompleto.Relacion#getTipoABM()
+	 * @see #getRelacion()
+	 * @generated
+	 */
+	EAttribute getRelacion_TipoABM();
+
+	/**
 	 * Returns the meta object for class '{@link diagramaClasesCompleto.Operacion <em>Operacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1849,6 +1898,17 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAtributo_Pseudonimo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagramaClasesCompleto.Atributo#getRepresentacionGrafica <em>Representacion Grafica</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Representacion Grafica</em>'.
+	 * @see diagramaClasesCompleto.Atributo#getRepresentacionGrafica()
+	 * @see #getAtributo()
+	 * @generated
+	 */
+	EAttribute getAtributo_RepresentacionGrafica();
 
 	/**
 	 * Returns the meta object for class '{@link diagramaClasesCompleto.Package <em>Package</em>}'.
@@ -2446,6 +2506,26 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	EEnum getLenguaje();
 
 	/**
+	 * Returns the meta object for enum '{@link diagramaClasesCompleto.RepresentacionGrafica <em>Representacion Grafica</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Representacion Grafica</em>'.
+	 * @see diagramaClasesCompleto.RepresentacionGrafica
+	 * @generated
+	 */
+	EEnum getRepresentacionGrafica();
+
+	/**
+	 * Returns the meta object for enum '{@link diagramaClasesCompleto.TipoABM <em>Tipo ABM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Tipo ABM</em>'.
+	 * @see diagramaClasesCompleto.TipoABM
+	 * @generated
+	 */
+	EEnum getTipoABM();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2720,6 +2800,14 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		EAttribute RELACION__VISIBILIDAD = eINSTANCE.getRelacion_Visibilidad();
 
 		/**
+		 * The meta object literal for the '<em><b>Tipo ABM</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RELACION__TIPO_ABM = eINSTANCE.getRelacion_TipoABM();
+
+		/**
 		 * The meta object literal for the '{@link diagramaClasesCompleto.impl.OperacionImpl <em>Operacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2802,6 +2890,14 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ATRIBUTO__PSEUDONIMO = eINSTANCE.getAtributo_Pseudonimo();
+
+		/**
+		 * The meta object literal for the '<em><b>Representacion Grafica</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATRIBUTO__REPRESENTACION_GRAFICA = eINSTANCE.getAtributo_RepresentacionGrafica();
 
 		/**
 		 * The meta object literal for the '{@link diagramaClasesCompleto.impl.PackageImpl <em>Package</em>}' class.
@@ -3293,6 +3389,26 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LENGUAJE = eINSTANCE.getLenguaje();
+
+		/**
+		 * The meta object literal for the '{@link diagramaClasesCompleto.RepresentacionGrafica <em>Representacion Grafica</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see diagramaClasesCompleto.RepresentacionGrafica
+		 * @see diagramaClasesCompleto.impl.DiagramaClasesCompletoPackageImpl#getRepresentacionGrafica()
+		 * @generated
+		 */
+		EEnum REPRESENTACION_GRAFICA = eINSTANCE.getRepresentacionGrafica();
+
+		/**
+		 * The meta object literal for the '{@link diagramaClasesCompleto.TipoABM <em>Tipo ABM</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see diagramaClasesCompleto.TipoABM
+		 * @see diagramaClasesCompleto.impl.DiagramaClasesCompletoPackageImpl#getTipoABM()
+		 * @generated
+		 */
+		EEnum TIPO_ABM = eINSTANCE.getTipoABM();
 
 	}
 

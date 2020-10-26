@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_rP6cUAs9EeuK05OqC82VAA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_rP6cUQs9EeuK05OqC82VAA" bindingContexts="_rP-vBQs9EeuK05OqC82VAA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;PruebaXMI.diagramaclasescompleto&quot; tooltip=&quot;PruebaDiagramaCompleto/PruebaXMI.diagramaclasescompleto&quot;>&#xD;&#xA;&lt;persistable path=&quot;/PruebaDiagramaCompleto/PruebaXMI.diagramaclasescompleto&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;new DiagramaDeClases&quot; tooltip=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird/new DiagramaDeClases&quot;>&#xD;&#xA;&lt;persistable REP_DESC_URI=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird#_IWyWEQKREeu5w-Dds4RBEw&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;new DiagramaDeClases&quot; uri=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird#_IXPCAQKREeu5w-Dds4RBEw&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.sirius.editor.editorPlugin.SiriusEditorID&quot; name=&quot;DiagramaCompleto.odesign&quot; tooltip=&quot;DiagramaCompleto.design/description/DiagramaCompleto.odesign&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DiagramaCompleto.design/description/DiagramaCompleto.odesign&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.sirius.editor.editorPlugin.SiriusEditorID&quot; name=&quot;project.odesign&quot; tooltip=&quot;DiagramaCompleto.project.design/description/project.odesign&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DiagramaCompleto.project.design/description/project.odesign&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;diagramaClasesCompleto.presentation.DiagramaClasesCompletoEditorID&quot; name=&quot;PruebaXMI.diagramaclasescompleto&quot; tooltip=&quot;PruebaDiagramaCompleto/PruebaXMI.diagramaclasescompleto&quot;>&#xD;&#xA;&lt;persistable path=&quot;/PruebaDiagramaCompleto/PruebaXMI.diagramaclasescompleto&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;new DiagramaDeClases&quot; tooltip=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird/new DiagramaDeClases&quot;>&#xD;&#xA;&lt;persistable REP_DESC_URI=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird#_IWyWEQKREeu5w-Dds4RBEw&quot; SESSION_RESOURCE_URI=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;new DiagramaDeClases&quot; uri=&quot;platform:/resource/PruebaDiagramaCompleto/representations.aird#_IXPCAQKREeu5w-Dds4RBEw&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.sirius.editor.editorPlugin.SiriusEditorID&quot; name=&quot;DiagramaCompleto.odesign&quot; tooltip=&quot;DiagramaCompleto.design/description/DiagramaCompleto.odesign&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DiagramaCompleto.design/description/DiagramaCompleto.odesign&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.sirius.editor.editorPlugin.SiriusEditorID&quot; name=&quot;project.odesign&quot; tooltip=&quot;DiagramaCompleto.project.design/description/project.odesign&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DiagramaCompleto.project.design/description/project.odesign&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_rP6cUQs9EeuK05OqC82VAA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_rP6cUgs9EeuK05OqC82VAA" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="697" height="735">
@@ -100,10 +100,9 @@
                       <tags>categoryTag:General</tags>
                     </children>
                   </children>
-                  <children xsi:type="basic:PartSashContainer" xmi:id="_6UZ9wA_0EeuGMqnN4MvNZw" containerData="5000" selectedElement="_rP6cZws9EeuK05OqC82VAA">
-                    <children xsi:type="advanced:Placeholder" xmi:id="_rP6cZgs9EeuK05OqC82VAA" elementId="org.eclipse.ui.editorss" containerData="6165" ref="_rP848gs9EeuK05OqC82VAA"/>
-                    <children xsi:type="basic:PartStack" xmi:id="_rP6cZws9EeuK05OqC82VAA" elementId="PartStack@2e67f025" containerData="3835" selectedElement="_rP6caAs9EeuK05OqC82VAA">
-                      <tags>active</tags>
+                  <children xsi:type="basic:PartSashContainer" xmi:id="_6UZ9wA_0EeuGMqnN4MvNZw" containerData="5000" selectedElement="_rP6cZgs9EeuK05OqC82VAA">
+                    <children xsi:type="advanced:Placeholder" xmi:id="_rP6cZgs9EeuK05OqC82VAA" elementId="org.eclipse.ui.editorss" containerData="6561" ref="_rP848gs9EeuK05OqC82VAA"/>
+                    <children xsi:type="basic:PartStack" xmi:id="_rP6cZws9EeuK05OqC82VAA" elementId="PartStack@2e67f025" containerData="3439" selectedElement="_rP6caAs9EeuK05OqC82VAA">
                       <children xsi:type="advanced:Placeholder" xmi:id="_rP6caAs9EeuK05OqC82VAA" elementId="org.eclipse.ui.views.PropertySheet" ref="_rP9f3gs9EeuK05OqC82VAA" closeable="true">
                         <tags>View</tags>
                         <tags>categoryTag:General</tags>
@@ -177,6 +176,7 @@
       <children xsi:type="basic:PartStack" xmi:id="_rP848ws9EeuK05OqC82VAA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_rP85Qws9EeuK05OqC82VAA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_rP849As9EeuK05OqC82VAA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DiagramaCompleto.odesign" iconURI="platform:/plugin/org.eclipse.sirius.editor/icons/full/obj16/file_odesign.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.sirius.editor.editorPlugin.SiriusEditorID&quot; name=&quot;DiagramaCompleto.odesign&quot; partName=&quot;DiagramaCompleto.odesign&quot; title=&quot;DiagramaCompleto.odesign&quot; tooltip=&quot;DiagramaCompleto.design/description/DiagramaCompleto.odesign&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DiagramaCompleto.design/description/DiagramaCompleto.odesign&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -188,6 +188,8 @@
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -263,8 +265,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_rP9f3ws9EeuK05OqC82VAA" elementId="org.eclipse.ui.views.PropertySheet">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -314,7 +314,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rP9f7gs9EeuK05OqC82VAA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_07P0kBMREeuga9ncDTPpzw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_rQGDRQs9EeuK05OqC82VAA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_otE5cBWAEeuby7llthgDPg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_rQGDRQs9EeuK05OqC82VAA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rP9f-ws9EeuK05OqC82VAA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -342,7 +342,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rP9gJAs9EeuK05OqC82VAA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_07qEQBMREeuga9ncDTPpzw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_rQGC7gs9EeuK05OqC82VAA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_otV_MBWAEeuby7llthgDPg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_rQGC7gs9EeuK05OqC82VAA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rP9gPAs9EeuK05OqC82VAA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

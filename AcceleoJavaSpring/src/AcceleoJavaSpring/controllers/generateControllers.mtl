@@ -2,13 +2,20 @@
 [module generateControllers('http://www.example.org/diagramaClasesCompleto')]
 
 
-[template public generateControllers(clase : Clase, paquete : Package)]
+[template public generateControllers(raiz : DiagramaClases)]
 
-[file ('src/main/java/com/example/demo/controllers/'+clase.nombre+'Controller.java', false, 'UTF-8')]
-package com.example.demo.controllers;
 
-import com.example.primera.entities.[paquete.nombre/].[clase.nombre/];
-import com.example.primera.services.[clase.nombre/]ServiceImpl;
+[for (paquete : Package | raiz.packages_contenidos)]
+	
+
+[for (clase : Clase | paquete.clasificadores_contenidos->filter(Clase))]
+[if (clase.tieneABM)]
+
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.replace('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/controllers/'+clase.nombre+'Controller.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].controllers;
+
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.[paquete.nombre/].[clase.nombre/];
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].services.[clase.nombre/]ServiceImpl;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,4 +28,7 @@ public class [clase.nombre/]Controller extends BaseControllerImpl<[clase.nombre/
 }
 
 [/file]
+[/if]
+[/for]
+[/for]
 [/template]

@@ -5,13 +5,13 @@
 [import AcceleoJavaSpring::Relation::generateRelation/]
 [import AcceleoJavaSpring::Relation::generateImplementation/]
 [import AcceleoJavaSpring::Relation::generateExtension/]
-[import AcceleoJavaSpring::controllers::generateControllers /]
+
 
 [template public generateEntity(d : DiagramaClases)]
 [for (paquete : Package | d.packages_contenidos)]
 		
 	[for (i : Clase | paquete.clasificadores_contenidos->filter(Clase))]
-	[file ('src/main/java/'+d.artefacto_contenido.grupoId.replace('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/entities/'+paquete.nombre+'/'+ i.nombre +'.java', false, 'UTF-8')]
+	[file ('src/main/java/'+d.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/entities/'+paquete.nombre+'/'+ i.nombre +'.java', false, 'UTF-8')]
 	package [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.[paquete.nombre/];
 	[if (not (i.relaciones_contenidas->isEmpty()))]
 		import javax.persistence.JoinColumn;
@@ -44,9 +44,7 @@
 	import lombok.Data;
 	import lombok.NoArgsConstructor;
 	[if (i.herencias_contenidas->size()=0)]
-		import [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.Base;
-	[else]
-		import [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.*;
+		import main.java.[d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.Base;
 	[/if]
 	
 		
@@ -61,13 +59,11 @@
 	[if (i.esAuditable)]@Audited[/if]
 	public [if(i.esAbstracta)]abstract [/if]class [i.nombre/] [generateExtension(i)/] [generateImplementation(i)/] {
 	[generateProperty(i)/]
-	[generateRelation(i,paquete)/]
+	[generateRelation(i,paquete,d)/]
 	
 	}
 	[/file]
-	[if (i.tieneABM)]
-		[generateControllers(i,paquete)/]
-	[/if]
+	
 	
 	
 	[/for]

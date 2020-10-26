@@ -1,6 +1,5 @@
-# List of external plug-in models previously loaded. Timestamp: 1603225315096
+# List of external plug-in models previously loaded. Timestamp: 1603492827005
 file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/AcceleoJavaSpring/
-file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/ColmenaMetamodelo/
 file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/DiagramaClasesCompleto/
 file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/DiagramaClasesCompleto.edit/
 file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/DiagramaClasesCompleto.editor/
@@ -15,9 +14,6 @@ file:/C:/Users/Rodrigo/.p2/pool/plugins/com.sun.el_2.2.0.v201303151357.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/com.sun.jna_4.5.1.v20190425-1842.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/com.sun.jna.platform_4.5.1.v20190425-1842.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/com.sun.xml.bind_2.2.0.v201505121915.jar
-file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/clases/
-file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/digramaDeClases.edit/
-file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/digramaDeClases.editor/
 file:/C:/Users/Rodrigo/.p2/pool/plugins/io.github.classgraph_4.8.35.v20190528-1517.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/javaewah_1.1.7.v20200107-0831.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/javax.activation_1.1.0.v201211130549.jar
@@ -91,13 +87,11 @@ file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.common.ui_3.7.10.202
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.compatibility_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.compatibility.ui_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.doc_3.7.10.202002210922.jar
-file:/C:/Users/Rodrigo/eclipse-workspace/org.eclipse.acceleo.ejemplo/
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.engine_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.examples_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.ide.ui_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.model_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.model.edit_3.7.10.202002210922.jar
-file:/C:/Users/Rodrigo/Desktop/Facultad/DSDM/refact/
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.parser_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.profiler_3.7.10.202002210922.jar
 file:/C:/Users/Rodrigo/.p2/pool/plugins/org.eclipse.acceleo.profiler.edit_3.7.10.202002210922.jar

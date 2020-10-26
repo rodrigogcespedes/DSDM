@@ -47,6 +47,7 @@ public class AtributoItemProvider extends RetornableItemProvider {
 			addTipoPropertyDescriptor(object);
 			addEsAuditablePropertyDescriptor(object);
 			addPseudonimoPropertyDescriptor(object);
+			addRepresentacionGraficaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -100,6 +101,22 @@ public class AtributoItemProvider extends RetornableItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Representacion Grafica feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRepresentacionGraficaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Atributo_representacionGrafica_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Atributo_representacionGrafica_feature",
+						"_UI_Atributo_type"),
+				DiagramaClasesCompletoPackage.Literals.ATRIBUTO__REPRESENTACION_GRAFICA, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Atributo.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +165,7 @@ public class AtributoItemProvider extends RetornableItemProvider {
 		case DiagramaClasesCompletoPackage.ATRIBUTO__TIPO:
 		case DiagramaClasesCompletoPackage.ATRIBUTO__ES_AUDITABLE:
 		case DiagramaClasesCompletoPackage.ATRIBUTO__PSEUDONIMO:
+		case DiagramaClasesCompletoPackage.ATRIBUTO__REPRESENTACION_GRAFICA:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

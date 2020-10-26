@@ -2,8 +2,7 @@
 <diagramaClasesCompleto:DiagramaClases xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramaClasesCompleto="http://www.example.org/diagramaClasesCompleto"
     xsi:schemaLocation="http://www.example.org/diagramaClasesCompleto diagramaClasesCompleto.ecore">
-
-    <packages_contenidos nombre="Paquete1">
+  <packages_contenidos nombre="Paquete1">
     <clasificadores_contenidos xsi:type="diagramaClasesCompleto:Clase" nombre="Domicilio">
       <atributos_contenidos nombre="calle" visibilidad="private" tipo="String"/>
       <atributos_contenidos nombre="numero" visibilidad="private"/>

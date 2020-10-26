@@ -5,7 +5,7 @@
 [import AcceleoJavaSpring::Relation::generateImplementation /]
 [import AcceleoJavaSpring::Relation::generateExtension /]
 
-[template public generateAssociativeClass(r : Relacion, paquete : Package)]
+[template public generateAssociativeClass(r : Relacion, paquete : Package, d: DiagramaClases)]
 [for (i : Clase | r.clases_asociativas_contenidas)]
 	[file ('src/main/java/com/example/demo/entities'+paquete.nombre+'/'+i.nombre+'.java', false, 'UTF-8')]
 	package com.example.demo.entities.[paquete.nombre/];
@@ -35,7 +35,7 @@
 	[if (i.esAuditable)]@Audited[/if]
 	public [if(i.esAbstracta)]abstract [/if]class [i.nombre/] [generateExtension(i)/] [generateImplementation(i)/] {
 	[generateProperty(i)/]
-	[generateRelation(i, paquete)/]
+	[generateRelation(i, paquete,d)/]
 	@OneToOne(cascade= CascadeType.ALL)
 	@JoinColumn(name="fk_[r.origen.nombre.toLowerFirst()/]")
 	[r.visibilidad/] [r.origen.nombre/] [r.origen.nombre.toLowerFirst()/];
