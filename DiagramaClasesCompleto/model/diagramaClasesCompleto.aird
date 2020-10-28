@@ -5,11 +5,7 @@
     <semanticResources>DiagramaClases.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_WN_lEPCLEeqUW9KVUPtBCQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-<<<<<<< HEAD
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_WeQTofenEeqc24r4kbW6YA" name="diagramaClasesCompleto class diagram" repPath="#_WeFUgPenEeqc24r4kbW6YA" changeId="e12c5202-7d16-40ed-a416-c9e5f08e722e">
-=======
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_WeQTofenEeqc24r4kbW6YA" name="diagramaClasesCompleto class diagram" repPath="#_WeFUgPenEeqc24r4kbW6YA" changeId="f85ba199-219a-49d5-bec8-c013e67abb9f">
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_WeQTofenEeqc24r4kbW6YA" name="diagramaClasesCompleto class diagram" repPath="#_WeFUgPenEeqc24r4kbW6YA" changeId="709bae8d-0fc6-4f95-b426-124e5605a542">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="diagramaClasesCompleto.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -725,7 +721,6 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_chK3sRVIEeuRtPAMvBgIwQ" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_chK3shVIEeuRtPAMvBgIwQ"/>
             </children>
-<<<<<<< HEAD
             <children xmi:type="notation:Node" xmi:id="_J8gW8BV6EeunDfuR6OgaLg" type="3010" element="_J4W2wBV6EeunDfuR6OgaLg">
               <styles xmi:type="notation:FontStyle" xmi:id="_J8gW8RV6EeunDfuR6OgaLg" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_J8gW8hV6EeunDfuR6OgaLg"/>
@@ -734,17 +729,11 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_FiBL0RV-EeunDfuR6OgaLg" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_FiBL0hV-EeunDfuR6OgaLg"/>
             </children>
-=======
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
             <styles xmi:type="notation:SortingStyle" xmi:id="_L_UO8hVIEeuRtPAMvBgIwQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_L_UO8xVIEeuRtPAMvBgIwQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_L_Tn4RVIEeuRtPAMvBgIwQ" fontName="Segoe UI" fontHeight="8"/>
-<<<<<<< HEAD
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L_Tn4hVIEeuRtPAMvBgIwQ" x="180" y="636" width="147" height="142"/>
-=======
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L_Tn4hVIEeuRtPAMvBgIwQ" x="180" y="636" width="147" height="117"/>
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_WeXoYvenEeqc24r4kbW6YA"/>
         <edges xmi:type="notation:Edge" xmi:id="_W0FZsPenEeqc24r4kbW6YA" type="4001" element="_WzvbcPenEeqc24r4kbW6YA" source="_Wz3XQPenEeqc24r4kbW6YA" target="_Wz8PwPenEeqc24r4kbW6YA">
@@ -1297,7 +1286,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rl6h4P9SEeqLXLTce9uzmw" name="visibilidad : ModicadoresAcceso = package" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rl6h4P9SEeqLXLTce9uzmw" name="visibilidad : ModicadoresAcceso = private" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="diagramaClasesCompleto.ecore#//Relacion/visibilidad"/>
         <semanticElements xmi:type="ecore:EAttribute" href="diagramaClasesCompleto.ecore#//Relacion/visibilidad"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_uz7WBP9SEeqLXLTce9uzmw" labelAlignment="LEFT">
@@ -1305,11 +1294,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-<<<<<<< HEAD
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_jFv_ABVIEeuRtPAMvBgIwQ" name="tipoABM : TipoABM = sinRepresentacion" tooltipText="">
-=======
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_jFv_ABVIEeuRtPAMvBgIwQ" name="tipoABM : TipoABM = simple" tooltipText="">
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
         <target xmi:type="ecore:EAttribute" href="diagramaClasesCompleto.ecore#//Relacion/tipoABM"/>
         <semanticElements xmi:type="ecore:EAttribute" href="diagramaClasesCompleto.ecore#//Relacion/tipoABM"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_kyOu8hVIEeuRtPAMvBgIwQ" labelAlignment="LEFT">
@@ -2667,7 +2652,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-<<<<<<< HEAD
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_J4W2wBV6EeunDfuR6OgaLg" name="sinRepresentacion" tooltipText="">
         <target xmi:type="ecore:EEnumLiteral" href="diagramaClasesCompleto.ecore#//TipoABM/sinRepresentacion"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="diagramaClasesCompleto.ecore#//TipoABM/sinRepresentacion"/>
@@ -2684,8 +2668,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-=======
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_WeHJsPenEeqc24r4kbW6YA"/>

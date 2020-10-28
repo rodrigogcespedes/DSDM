@@ -1,36 +1,7 @@
-[comment encoding = UTF-8 /]
-[module generateBaseService('http://www.example.org/diagramaClasesCompleto')]
+package com.example.demo.services;
 
-
-[template public generateBaseService(raiz : DiagramaClases)]
-
-[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/services/BaseService.java', false, 'UTF-8')]
-package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].services;
-
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
-import java.io.Serializable;
-import java.util.List;
-
-public interface BaseService<E extends Base, ID extends Serializable> {
-    public List<E> findAll() throws Exception;
-    public Page<E> findAll(Pageable pageable) throws Exception;
-    public E findById(ID id) throws Exception;
-    public E save(E entity) throws Exception;
-    public E update(ID id, E entity) throws Exception;
-    public boolean delete(ID id) throws Exception;
-}
-
-
-[/file]
-
-[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/services/BaseServiceImpl.java', false, 'UTF-8')]
-package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].services;
-
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].repositories.BaseRepository;
+import com.example.demo.entities.Base;
+import com.example.demo.repositories.BaseRepository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -119,6 +90,3 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
     }
 
 }
-[/file]
-
-[/template]

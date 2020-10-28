@@ -56,29 +56,27 @@ public enum TipoABM implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-<<<<<<< HEAD
 	MAESTRO_DETALLE_COMBO(4, "maestroDetalleCombo", "maestroDetalleCombo"),
+
 	/**
-	* The '<em><b>Sin Representacion</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #SIN_REPRESENTACION_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>Sin Representacion</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SIN_REPRESENTACION_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	SIN_REPRESENTACION(4, "sinRepresentacion", "sinRepresentacion"),
+
 	/**
-	* The '<em><b>Maestro Con Detalle Multiple</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #MAESTRO_CON_DETALLE_MULTIPLE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>Maestro Con Detalle Multiple</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_CON_DETALLE_MULTIPLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	MAESTRO_CON_DETALLE_MULTIPLE(5, "maestroConDetalleMultiple", "maestroConDetalleMultiple");
-=======
-	MAESTRO_DETALLE_COMBO(4, "maestroDetalleCombo", "maestroDetalleCombo");
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 
 	/**
 	 * The '<em><b>Simple</b></em>' literal value.
@@ -125,7 +123,6 @@ public enum TipoABM implements Enumerator {
 	public static final int MAESTRO_DETALLE_COMBO_VALUE = 4;
 
 	/**
-<<<<<<< HEAD
 	 * The '<em><b>Sin Representacion</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,19 +145,13 @@ public enum TipoABM implements Enumerator {
 	public static final int MAESTRO_CON_DETALLE_MULTIPLE_VALUE = 5;
 
 	/**
-=======
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 	 * An array of all the '<em><b>Tipo ABM</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final TipoABM[] VALUES_ARRAY = new TipoABM[] { SIMPLE, SELECCIONABLE, MAESTRO_DETALLE,
-<<<<<<< HEAD
 			MAESTRO_DETALLE_COMBO, SIN_REPRESENTACION, MAESTRO_CON_DETALLE_MULTIPLE, };
-=======
-			MAESTRO_DETALLE_COMBO, };
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 
 	/**
 	 * A public read-only list of all the '<em><b>Tipo ABM</b></em>' enumerators.
@@ -224,11 +215,8 @@ public enum TipoABM implements Enumerator {
 			return MAESTRO_DETALLE;
 		case MAESTRO_DETALLE_COMBO_VALUE:
 			return MAESTRO_DETALLE_COMBO;
-<<<<<<< HEAD
 		case MAESTRO_CON_DETALLE_MULTIPLE_VALUE:
 			return MAESTRO_CON_DETALLE_MULTIPLE;
-=======
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 		}
 		return null;
 	}

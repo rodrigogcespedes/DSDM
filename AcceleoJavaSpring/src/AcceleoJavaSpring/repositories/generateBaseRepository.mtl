@@ -4,7 +4,7 @@
 
 [template public generateBaseRepository(raiz : DiagramaClases)]
 
-[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.replace('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/repositories/BaseRepository.java', false, 'UTF-8')]
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/repositories/BaseRepository.java', false, 'UTF-8')]
 package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].repositories;
 
 import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;

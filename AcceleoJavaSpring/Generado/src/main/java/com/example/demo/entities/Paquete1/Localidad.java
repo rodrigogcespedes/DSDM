@@ -1,17 +1,13 @@
 	package com.example.demo.entities.Paquete1;
-	import java.io.Serializable;
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
-	import javax.persistence.GeneratedValue;
-	import javax.persistence.GenerationType;
-	import javax.persistence.Id;
 	import javax.persistence.Table;
-	
+	import org.hibernate.envers.Audited;
 	import lombok.AllArgsConstructor;
 	import lombok.Builder;
 	import lombok.Data;
 	import lombok.NoArgsConstructor;
-		import main.java.com.example.demo.entities.Base;
+		import com.example.demo.entities.Base;
 	
 		
 	@Entity
@@ -21,11 +17,13 @@
 	@NoArgsConstructor
 	@Builder
 	
-	
+	@Audited
 	public class Localidad 	extends Base
 	  {
-	@Column(name = "")
+	@Column(name = "denominacion")
 		private  String denominacion;
+	
+	
 	
 	
 	

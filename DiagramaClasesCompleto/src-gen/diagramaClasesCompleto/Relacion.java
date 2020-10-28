@@ -206,6 +206,7 @@ public interface Relacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Visibilidad</b></em>' attribute.
+	 * The default value is <code>"private"</code>.
 	 * The literals are from the enumeration {@link diagramaClasesCompleto.ModicadoresAcceso}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,7 +214,7 @@ public interface Relacion extends EObject {
 	 * @see diagramaClasesCompleto.ModicadoresAcceso
 	 * @see #setVisibilidad(ModicadoresAcceso)
 	 * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion_Visibilidad()
-	 * @model
+	 * @model default="private"
 	 * @generated
 	 */
 	ModicadoresAcceso getVisibilidad();
@@ -231,10 +232,7 @@ public interface Relacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Tipo ABM</b></em>' attribute.
-<<<<<<< HEAD
 	 * The default value is <code>"sinRepresentacion"</code>.
-=======
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 	 * The literals are from the enumeration {@link diagramaClasesCompleto.TipoABM}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,11 +240,7 @@ public interface Relacion extends EObject {
 	 * @see diagramaClasesCompleto.TipoABM
 	 * @see #setTipoABM(TipoABM)
 	 * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion_TipoABM()
-<<<<<<< HEAD
 	 * @model default="sinRepresentacion"
-=======
-	 * @model
->>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
 	 * @generated
 	 */
 	TipoABM getTipoABM();

@@ -1,17 +1,13 @@
 	package com.example.demo.entities.Paquete1;
-	import java.io.Serializable;
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
-	import javax.persistence.GeneratedValue;
-	import javax.persistence.GenerationType;
-	import javax.persistence.Id;
 	import javax.persistence.Table;
 	
 	import lombok.AllArgsConstructor;
 	import lombok.Builder;
 	import lombok.Data;
 	import lombok.NoArgsConstructor;
-		import main.java.com.example.demo.entities.Base;
+		import com.example.demo.entities.Base;
 	
 		
 	@Entity
@@ -24,12 +20,14 @@
 	
 	public class Autor 	extends Base
 	  {
-	@Column(name = "")
+	@Column(name = "nombre")
 		private  String nombre;
-	@Column(name = "")
+	@Column(name = "apellido")
 		private  String apellido;
-	@Column(name = "")
+	@Column(name = "bibliografia")
 		private  String bibliografia;
+	
+	
 	
 	
 	

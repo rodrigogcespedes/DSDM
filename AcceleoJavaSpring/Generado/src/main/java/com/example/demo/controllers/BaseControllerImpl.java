@@ -1,38 +1,7 @@
-[comment encoding = UTF-8 /]
-[module generateBaseController('http://www.example.org/diagramaClasesCompleto')]
+package com.example.demo.controllers;
 
-
-[template public generateBaseController(raiz : DiagramaClases)]
-
-[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/controllers/BaseController.java', false, 'UTF-8')]
-package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].controllers;
-
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-
-
-import java.io.Serializable;
-
-public interface BaseController<E extends Base, ID extends Serializable> {
-
-    public ResponseEntity<?> getAll();
-    public ResponseEntity<?> getAll(Pageable pageable);
-    public ResponseEntity<?> getOne(@PathVariable ID id);
-    public ResponseEntity<?> save(@RequestBody E entity );
-    public ResponseEntity<?> update(@PathVariable ID id, @RequestBody E entity );
-    public ResponseEntity<?> delete(@PathVariable ID id);
-}
-
-[/file]
-
-[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/controllers/BaseControllerImpl.java', false, 'UTF-8')]
-package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].controllers;
-
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].services.BaseServiceImpl;
+import com.example.demo.entities.Base;
+import com.example.demo.services.BaseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -100,6 +69,3 @@ public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceIm
         }
     }
 }
-[/file]
-
-[/template]

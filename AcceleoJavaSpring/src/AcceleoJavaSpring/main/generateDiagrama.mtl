@@ -19,6 +19,13 @@
 [generateInterface(d)/]
 [generateBaseEntity(d)/]
 [generateEntity(d)/]
-
+[generateAplicationProperties(d)/]
+[generatePom(d)/]
+[generateBaseController(d)/]
+[generateControllers(d)/]
+[generateBaseRepository(d)/]
+[generateRepositories(d)/]
+[generateBaseService(d)/]
+[generateServices(d)/]
 
 [/template]

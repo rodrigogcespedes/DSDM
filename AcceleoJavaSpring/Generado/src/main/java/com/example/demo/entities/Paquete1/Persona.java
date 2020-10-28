@@ -4,19 +4,18 @@
 			import javax.persistence.OneToOne;
 			import javax.persistence.OneToMany;
 			import javax.persistence.JoinTable;
-	import java.io.Serializable;
+			import java.util.ArrayList;
+			import java.util.List;
+			import lombok.Builder.Default;
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
-	import javax.persistence.GeneratedValue;
-	import javax.persistence.GenerationType;
-	import javax.persistence.Id;
 	import javax.persistence.Table;
 	
 	import lombok.AllArgsConstructor;
 	import lombok.Builder;
 	import lombok.Data;
 	import lombok.NoArgsConstructor;
-		import main.java.com.example.demo.entities.Base;
+		import com.example.demo.entities.Base;
 	
 		
 	@Entity
@@ -29,12 +28,26 @@
 	
 	public class Persona 	extends Base
 	  {
-	@Column(name = "")
+	@Column(name = "nombre")
 		private  String nombre;
 	@Column(name = "")
 		private  String apellido;
-	@Column(name = "")
+	@Column(name = "dni")
 		private  int dni;
+	
+	
+	
+	
+	
+				@OneToOne(cascade= CascadeType.ALL)
+				@JoinColumn(name="fk_Domicilio")
+			private Domicilio haciaDomicilio;
+	
+	
+	
+				@OneToMany(cascade=CascadeType.ALL, orphanRemoval=true)
+			private List<Libro> haciaLibro = new ArrayList<Libro>();
+	
 	
 	
 	

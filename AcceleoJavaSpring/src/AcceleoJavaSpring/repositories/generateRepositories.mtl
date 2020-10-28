@@ -12,9 +12,9 @@
 
 [if (clase.tieneABM)]
 
-[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.replace('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/repositories/'+clase.nombre+'Repository.java', false, 'UTF-8')]
-package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactoId/].repositories;
-import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactoId/].entities.[paquete.nombre/].[clase.nombre/];
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/repositories/'+clase.nombre+'Repository.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].repositories;
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.[paquete.nombre/].[clase.nombre/];
 import org.springframework.stereotype.Repository;
 
 @Repository
