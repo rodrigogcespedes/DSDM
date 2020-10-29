@@ -56,7 +56,27 @@ public enum TipoABM implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MAESTRO_DETALLE_COMBO(4, "maestroDetalleCombo", "maestroDetalleCombo");
+	MAESTRO_DETALLE_COMBO(4, "maestroDetalleCombo", "maestroDetalleCombo"),
+
+	/**
+	 * The '<em><b>Sin Representacion</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SIN_REPRESENTACION_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SIN_REPRESENTACION(4, "sinRepresentacion", "sinRepresentacion"),
+
+	/**
+	 * The '<em><b>Maestro Con Detalle Multiple</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_CON_DETALLE_MULTIPLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MAESTRO_CON_DETALLE_MULTIPLE(5, "maestroConDetalleMultiple", "maestroConDetalleMultiple");
 
 	/**
 	 * The '<em><b>Simple</b></em>' literal value.
@@ -103,13 +123,35 @@ public enum TipoABM implements Enumerator {
 	public static final int MAESTRO_DETALLE_COMBO_VALUE = 4;
 
 	/**
+	 * The '<em><b>Sin Representacion</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SIN_REPRESENTACION
+	 * @model name="sinRepresentacion"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SIN_REPRESENTACION_VALUE = 4;
+
+	/**
+	 * The '<em><b>Maestro Con Detalle Multiple</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_CON_DETALLE_MULTIPLE
+	 * @model name="maestroConDetalleMultiple"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MAESTRO_CON_DETALLE_MULTIPLE_VALUE = 5;
+
+	/**
 	 * An array of all the '<em><b>Tipo ABM</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final TipoABM[] VALUES_ARRAY = new TipoABM[] { SIMPLE, SELECCIONABLE, MAESTRO_DETALLE,
-			MAESTRO_DETALLE_COMBO, };
+			MAESTRO_DETALLE_COMBO, SIN_REPRESENTACION, MAESTRO_CON_DETALLE_MULTIPLE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Tipo ABM</b></em>' enumerators.
@@ -173,6 +215,8 @@ public enum TipoABM implements Enumerator {
 			return MAESTRO_DETALLE;
 		case MAESTRO_DETALLE_COMBO_VALUE:
 			return MAESTRO_DETALLE_COMBO;
+		case MAESTRO_CON_DETALLE_MULTIPLE_VALUE:
+			return MAESTRO_CON_DETALLE_MULTIPLE;
 		}
 		return null;
 	}

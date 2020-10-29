@@ -4,8 +4,8 @@
 
 [template public generateAplicationProperties(raiz : DiagramaClases)]
 
-[file ('src/main/resources/aplication.properties', false, 'UTF-8')]
-spring.datasource.url=jdbc:mysql://[raiz.configuraciondb.ip/]:[raiz.configuraciondb.dbPuerto/]/[raiz.configuraciondb.dbNombre/]?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+[file ('src/main/resources/application.properties', false, 'UTF-8')]
+spring.datasource.url=jdbc:[raiz.configuraciondb.tipoProveedor/]://[raiz.configuraciondb.ip/]:[raiz.configuraciondb.dbPuerto/]/[raiz.configuraciondb.dbNombre/]?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 spring.datasource.username=[raiz.configuraciondb.dbUsuario/]
 spring.datasource.password=[raiz.configuraciondb.dbContrasena/]
 

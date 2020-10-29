@@ -5,13 +5,13 @@
 [import AcceleoJavaSpring::Relation::generateRelation/]
 [import AcceleoJavaSpring::Relation::generateImplementation/]
 [import AcceleoJavaSpring::Relation::generateExtension/]
-[import AcceleoJavaSpring::controllers::generateControllers /]
+
 
 [template public generateEntity(d : DiagramaClases)]
 [for (paquete : Package | d.packages_contenidos)]
 		
 	[for (i : Clase | paquete.clasificadores_contenidos->filter(Clase))]
-	[file ('src/main/java/'+d.artefacto_contenido.grupoId.replace('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/entities/'+paquete.nombre+'/'+ i.nombre +'.java', false, 'UTF-8')]
+	[file ('src/main/java/'+d.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/entities/'+paquete.nombre+'/'+ i.nombre +'.java', false, 'UTF-8')]
 	package [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.[paquete.nombre/];
 	[if (not (i.relaciones_contenidas->isEmpty()))]
 		import javax.persistence.JoinColumn;
@@ -22,21 +22,25 @@
 		[if (i.relaciones_contenidas->exists(multiplicidad = Multiplicidad::oneToMany))]
 			import javax.persistence.OneToMany;
 			import javax.persistence.JoinTable;
+			import java.util.ArrayList;
+			import java.util.List;
+			import lombok.Builder.Default;
 		[/if]
 		[if (i.relaciones_contenidas->exists(multiplicidad = Multiplicidad::manyToOne))]
 			import javax.persistence.ManyToOne;
 		[/if]
 		[if (i.relaciones_contenidas->exists(multiplicidad = Multiplicidad::manyToMany))]
 			import javax.persistence.ManyToMany;
+			[if (not(i.relaciones_contenidas->exists(multiplicidad = Multiplicidad::oneToMany)))]
 			import javax.persistence.JoinTable;
+			import java.util.ArrayList;
+			import java.util.List;
+			import lombok.Builder.Default;
+			[/if]
 		[/if]
 	[/if]
-	import java.io.Serializable;
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
-	import javax.persistence.GeneratedValue;
-	import javax.persistence.GenerationType;
-	import javax.persistence.Id;
 	import javax.persistence.Table;
 	[if (i.esAuditable)]import org.hibernate.envers.Audited;[/if]
 	import lombok.AllArgsConstructor;
@@ -45,8 +49,6 @@
 	import lombok.NoArgsConstructor;
 	[if (i.herencias_contenidas->size()=0)]
 		import [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.Base;
-	[else]
-		import [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.*;
 	[/if]
 	
 		
@@ -61,13 +63,11 @@
 	[if (i.esAuditable)]@Audited[/if]
 	public [if(i.esAbstracta)]abstract [/if]class [i.nombre/] [generateExtension(i)/] [generateImplementation(i)/] {
 	[generateProperty(i)/]
-	[generateRelation(i,paquete)/]
+	[generateRelation(i,paquete,d)/]
 	
 	}
 	[/file]
-	[if (i.tieneABM)]
-		[generateControllers(i,paquete)/]
-	[/if]
+	
 	
 	
 	[/for]

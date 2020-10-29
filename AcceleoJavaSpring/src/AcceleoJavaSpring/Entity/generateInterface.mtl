@@ -6,7 +6,7 @@
 [template public generateInterface(d : DiagramaClases)]
 [for (p : Package | d.packages_contenidos)]
 	[for (i : Interface | p.clasificadores_contenidos->filter(Interface))]
-		[file ('src/main/java/'+d.artefacto_contenido.grupoId.replace('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/entities/'+p.nombre+'/'+ i.nombre +'.java', false, 'UTF-8')]
+		[file ('src/main/java/'+d.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/entities/'+p.nombre+'/'+ i.nombre +'.java', false, 'UTF-8')]
 		package [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.[p.nombre/];
 		public interface [i.nombre/] [generateInterfaceExtension(i)/]{
 		[generateInterfaceProperty(i)/]

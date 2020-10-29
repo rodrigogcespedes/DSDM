@@ -89,6 +89,8 @@
       <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/seleccionable"/>
       <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/maestroDetalle"/>
       <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/maestroDetalleCombo"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/sinRepresentacion"/>
+      <genEnumLiterals ecoreEnumLiteral="diagramaClasesCompleto.ecore#//TipoABM/maestroConDetalleMultiple"/>
     </genEnums>
     <genClasses ecoreClass="diagramaClasesCompleto.ecore#//DiagramaClases">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diagramaClasesCompleto.ecore#//DiagramaClases/packages_contenidos"/>

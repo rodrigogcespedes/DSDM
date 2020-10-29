@@ -361,15 +361,27 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+<<<<<<< HEAD
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ClaseAsociativa" edgeMappings="//@ownedViewpoints[name='DiagramaUTN']/@ownedRepresentations[name='DiagramaDeClases']/@defaultLayer/@edgeMappings[name='Asociativa']">
+=======
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="ClaseAsociativa" edgeMappings="//@ownedViewpoints[name='DiagramaUTN']/@ownedRepresentations[name='DiagramaDeClases']/@defaultLayer/@edgeMappings[name='ClaseAsociativa']" iconPath="/DiagramaCompleto.design/iconos/ClaseAbstracta.gif">
+>>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
+<<<<<<< HEAD
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diagramaClasesCompleto::Clase" referenceName="clases_asociativas_contenidas">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="['Clase' + Clase.allInstances()->size()/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="esAsociativa" valueExpression="true"/>
+                </subModelOperations>
+=======
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="diagramaClasesCompleto::Clase" referenceName="clases_asociativas_contenidas">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="esAsociativa" valueExpression="true"/>
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="nombre" valueExpression="[source.origen.nombre+'_'+source.destino.nombre + source.clases_asociativas_contenidas->size()/]"/>
+>>>>>>> 9d6cd31d0e2f05ad4572427bbfa863744f287d0b
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

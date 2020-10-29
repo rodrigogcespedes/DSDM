@@ -2,21 +2,24 @@
 [module generateBaseController('http://www.example.org/diagramaClasesCompleto')]
 
 
-[template public generateBaseController(aDiagramaClases : DiagramaClases)]
+[template public generateBaseController(raiz : DiagramaClases)]
 
-[file ('src/main/java/com/example/demo/controllers/BaseController.java', false, 'UTF-8')]
-package com.example.demo.controllers;
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/controllers/BaseController.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].controllers;
 
-import com.example.demo.entities.Base;
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+
 
 import java.io.Serializable;
 
 public interface BaseController<E extends Base, ID extends Serializable> {
 
     public ResponseEntity<?> getAll();
+    public ResponseEntity<?> getAll(Pageable pageable);
     public ResponseEntity<?> getOne(@PathVariable ID id);
     public ResponseEntity<?> save(@RequestBody E entity );
     public ResponseEntity<?> update(@PathVariable ID id, @RequestBody E entity );
@@ -25,12 +28,13 @@ public interface BaseController<E extends Base, ID extends Serializable> {
 
 [/file]
 
-[file ('src/main/java/com/example/demo/controllers/BaseControllerImpl.java', false, 'UTF-8')]
-package com.example.demo.controllers;
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/controllers/BaseControllerImpl.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].controllers;
 
-import com.example.demo.entities.Base;
-import com.example.demo.services.BaseServiceImpl;
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.Base;
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].services.BaseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,6 +49,15 @@ public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceIm
     public ResponseEntity<?> getAll() {
         try{
             return ResponseEntity.status(HttpStatus.OK).body(service.findAll());
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error\"}");
+        }
+    }
+
+    @GetMapping("/paged")
+    public ResponseEntity<?> getAll(Pageable pageable){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(service.findAll(pageable));
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\":\"Error\"}");
         }

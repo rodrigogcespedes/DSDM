@@ -3,13 +3,15 @@ package com.example.demo.services;
 import com.example.demo.entities.Base;
 import com.example.demo.repositories.BaseRepository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
 public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> implements BaseService<E, ID> {
-
 
     protected BaseRepository<E,ID> repository;
     public BaseServiceImpl(BaseRepository<E,ID> repository){
@@ -27,6 +29,16 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
         }
     }
 
+    @Override
+    @Transactional
+    public Page<E> findAll(Pageable pageable) throws Exception{
+        try{
+            Page<E> entities = repository.findAll(pageable);
+            return entities;
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
     @Override
     @Transactional
     public E findById(ID id) throws Exception {

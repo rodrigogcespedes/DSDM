@@ -1586,11 +1586,11 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelacion_EsStatic(), ecorePackage.getEBoolean(), "esStatic", null, 0, 1, Relacion.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelacion_Visibilidad(), this.getModicadoresAcceso(), "visibilidad", null, 0, 1,
+		initEAttribute(getRelacion_Visibilidad(), this.getModicadoresAcceso(), "visibilidad", "private", 0, 1,
 				Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", null, 0, 1, Relacion.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", "sinRepresentacion", 0, 1, Relacion.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operacionEClass, Operacion.class, "Operacion", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1834,6 +1834,8 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SELECCIONABLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE_COMBO);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.SIN_REPRESENTACION);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_CON_DETALLE_MULTIPLE);
 
 		// Create resource
 		createResource(eNS_URI);

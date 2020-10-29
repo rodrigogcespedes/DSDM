@@ -188,7 +188,7 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ModicadoresAcceso VISIBILIDAD_EDEFAULT = ModicadoresAcceso.PACKAGE;
+	protected static final ModicadoresAcceso VISIBILIDAD_EDEFAULT = ModicadoresAcceso.PRIVATE;
 
 	/**
 	 * The cached value of the '{@link #getVisibilidad() <em>Visibilidad</em>}' attribute.
@@ -208,7 +208,7 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TipoABM TIPO_ABM_EDEFAULT = TipoABM.SIMPLE;
+	protected static final TipoABM TIPO_ABM_EDEFAULT = TipoABM.SIN_REPRESENTACION;
 
 	/**
 	 * The cached value of the '{@link #getTipoABM() <em>Tipo ABM</em>}' attribute.
