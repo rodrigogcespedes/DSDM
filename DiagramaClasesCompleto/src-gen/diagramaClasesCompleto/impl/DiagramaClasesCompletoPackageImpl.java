@@ -1833,9 +1833,10 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SIMPLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SELECCIONABLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_COMBO_DETALLE);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_DETALLE_COMBO);
+		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_COMBO_DETALLE_COMBO);
 		addEEnumLiteral(tipoABMEEnum, TipoABM.SIN_REPRESENTACION);
-		addEEnumLiteral(tipoABMEEnum, TipoABM.MAESTRO_CON_DETALLE_MULTIPLE);
 
 		// Create resource
 		createResource(eNS_URI);

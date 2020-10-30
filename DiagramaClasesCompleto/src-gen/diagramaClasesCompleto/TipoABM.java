@@ -49,6 +49,16 @@ public enum TipoABM implements Enumerator {
 	MAESTRO_DETALLE(3, "maestroDetalle", "maestroDetalle"),
 
 	/**
+	 * The '<em><b>Maestro Combo Detalle</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_COMBO_DETALLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MAESTRO_COMBO_DETALLE(3, "maestroComboDetalle", "maestroComboDetalle"),
+
+	/**
 	 * The '<em><b>Maestro Detalle Combo</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,6 +69,16 @@ public enum TipoABM implements Enumerator {
 	MAESTRO_DETALLE_COMBO(4, "maestroDetalleCombo", "maestroDetalleCombo"),
 
 	/**
+	 * The '<em><b>Maestro Combo Detalle Combo</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_COMBO_DETALLE_COMBO_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MAESTRO_COMBO_DETALLE_COMBO(5, "maestroComboDetalleCombo", "maestroComboDetalleCombo"),
+
+	/**
 	 * The '<em><b>Sin Representacion</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,17 +86,7 @@ public enum TipoABM implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SIN_REPRESENTACION(4, "sinRepresentacion", "sinRepresentacion"),
-
-	/**
-	 * The '<em><b>Maestro Con Detalle Multiple</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MAESTRO_CON_DETALLE_MULTIPLE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MAESTRO_CON_DETALLE_MULTIPLE(5, "maestroConDetalleMultiple", "maestroConDetalleMultiple");
+	SIN_REPRESENTACION(6, "sinRepresentacion", "sinRepresentacion");
 
 	/**
 	 * The '<em><b>Simple</b></em>' literal value.
@@ -112,6 +122,17 @@ public enum TipoABM implements Enumerator {
 	public static final int MAESTRO_DETALLE_VALUE = 3;
 
 	/**
+	 * The '<em><b>Maestro Combo Detalle</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_COMBO_DETALLE
+	 * @model name="maestroComboDetalle"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MAESTRO_COMBO_DETALLE_VALUE = 3;
+
+	/**
 	 * The '<em><b>Maestro Detalle Combo</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -123,6 +144,17 @@ public enum TipoABM implements Enumerator {
 	public static final int MAESTRO_DETALLE_COMBO_VALUE = 4;
 
 	/**
+	 * The '<em><b>Maestro Combo Detalle Combo</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAESTRO_COMBO_DETALLE_COMBO
+	 * @model name="maestroComboDetalleCombo"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MAESTRO_COMBO_DETALLE_COMBO_VALUE = 5;
+
+	/**
 	 * The '<em><b>Sin Representacion</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -131,18 +163,7 @@ public enum TipoABM implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SIN_REPRESENTACION_VALUE = 4;
-
-	/**
-	 * The '<em><b>Maestro Con Detalle Multiple</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MAESTRO_CON_DETALLE_MULTIPLE
-	 * @model name="maestroConDetalleMultiple"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int MAESTRO_CON_DETALLE_MULTIPLE_VALUE = 5;
+	public static final int SIN_REPRESENTACION_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>Tipo ABM</b></em>' enumerators.
@@ -151,7 +172,7 @@ public enum TipoABM implements Enumerator {
 	 * @generated
 	 */
 	private static final TipoABM[] VALUES_ARRAY = new TipoABM[] { SIMPLE, SELECCIONABLE, MAESTRO_DETALLE,
-			MAESTRO_DETALLE_COMBO, SIN_REPRESENTACION, MAESTRO_CON_DETALLE_MULTIPLE, };
+			MAESTRO_COMBO_DETALLE, MAESTRO_DETALLE_COMBO, MAESTRO_COMBO_DETALLE_COMBO, SIN_REPRESENTACION, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Tipo ABM</b></em>' enumerators.
@@ -215,8 +236,10 @@ public enum TipoABM implements Enumerator {
 			return MAESTRO_DETALLE;
 		case MAESTRO_DETALLE_COMBO_VALUE:
 			return MAESTRO_DETALLE_COMBO;
-		case MAESTRO_CON_DETALLE_MULTIPLE_VALUE:
-			return MAESTRO_CON_DETALLE_MULTIPLE;
+		case MAESTRO_COMBO_DETALLE_COMBO_VALUE:
+			return MAESTRO_COMBO_DETALLE_COMBO;
+		case SIN_REPRESENTACION_VALUE:
+			return SIN_REPRESENTACION;
 		}
 		return null;
 	}
