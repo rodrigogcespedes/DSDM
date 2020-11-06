@@ -1,6 +1,7 @@
 [comment encoding = UTF-8 /]
 [module generateControllers('http://www.example.org/diagramaClasesCompleto')]
 
+[import AcceleoJavaSpring::controllers::generateJSONAtributte/]
 
 [template public generateControllers(raiz : DiagramaClases)]
 
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/[clase.nombre.toLowerFirst()/]s")
 public class [clase.nombre/]Controller extends BaseControllerImpl<[clase.nombre/], [clase.nombre/]ServiceImpl>{
+
 
 }
 

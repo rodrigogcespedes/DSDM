@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[module generateCustomRevisionListener('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateCustomRevisionListener(d : DiagramaClases)]
+[file ('src/main/java/'+d.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+d.artefacto_contenido.artefactotId+'/config/CustomRevisionListener.java', false, 'UTF-8')]
+package [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].config;
+
+import org.hibernate.envers.RevisionListener;
+
+import [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.audit.Revision;
+
+public class CustomRevisionListener implements RevisionListener{
+
+    @Override
+    public void newRevision(Object revisionEntity) {
+        final Revision revision = (Revision) revisionEntity;
+    }
+
+}
+[/file]
+[/template]

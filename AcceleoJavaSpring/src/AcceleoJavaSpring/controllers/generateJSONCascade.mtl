@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module generateJSONCascade('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateJSONCascade(clase : Clase)]
+[for (relacion : Relacion | clase.relaciones_contenidas)]
+
+
+
+
+[/for]
+[/template]

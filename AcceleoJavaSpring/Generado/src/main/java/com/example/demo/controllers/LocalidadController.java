@@ -11,5 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path = "api/v1/localidads")
 public class LocalidadController extends BaseControllerImpl<Localidad, LocalidadServiceImpl>{
 
+
 }
 

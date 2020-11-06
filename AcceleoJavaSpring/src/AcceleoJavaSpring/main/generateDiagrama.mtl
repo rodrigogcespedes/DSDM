@@ -12,6 +12,9 @@
 [import AcceleoJavaSpring::Configurations::generatePom /]
 [import AcceleoJavaSpring::Configurations::generateAplicationProperties /]
 [import AcceleoJavaSpring::controllers::generateControllers /]
+[import AcceleoJavaSpring::Configurations::generateRevision/]
+[import AcceleoJavaSpring::Configurations::generateSwaggerConfig /]
+[import AcceleoJavaSpring::Configurations::generateCustomRevisionListener /]
 
 [template public generateDiagrama(d : DiagramaClases)]
 [comment @main/]
@@ -27,5 +30,8 @@
 [generateRepositories(d)/]
 [generateBaseService(d)/]
 [generateServices(d)/]
+[generateRevision(d)/]
+[generateSwaggerConfig(d)/]
+[generateCustomRevisionListener(d)/]
 
 [/template]
