@@ -15,6 +15,9 @@
 [import AcceleoJavaSpring::Configurations::generateRevision/]
 [import AcceleoJavaSpring::Configurations::generateSwaggerConfig /]
 [import AcceleoJavaSpring::Configurations::generateCustomRevisionListener /]
+[import AcceleoJavaSpring::test::generateUnitController /]
+[import AcceleoJavaSpring::test::generateUnitRepository /]
+[import AcceleoJavaSpring::test::generateUnitService /]
 
 [template public generateDiagrama(d : DiagramaClases)]
 [comment @main/]
@@ -33,5 +36,8 @@
 [generateRevision(d)/]
 [generateSwaggerConfig(d)/]
 [generateCustomRevisionListener(d)/]
+[generateUnitController(d)/]
+[generateUnitRepository(d)/]
+[generateUnitService(d)/]
 
 [/template]

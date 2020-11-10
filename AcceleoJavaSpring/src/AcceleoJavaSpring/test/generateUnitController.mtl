@@ -1,0 +1,238 @@
+[comment encoding = UTF-8 /]
+[module generateUnitController('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateUnitController(raiz : DiagramaClases)]
+
+[for (paquete : Package | raiz.packages_contenidos)]
+	
+
+[for (clase : Clase | paquete.clasificadores_contenidos->filter(Clase))]
+
+[if (clase.tieneABM)]
+
+[file ('src/test/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/controllers/'+clase.nombre+'ControllerTest.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].controllers;
+import static org.hamcrest.CoreMatchers.is;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+
+
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.[clase.nombre.toUpperFirst()/];
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].services.[clase.nombre.toUpperFirst()/]ServiceImpl;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@RunWith(SpringRunner.class)
+@WebMvcTest([clase.nombre.toUpperFirst()/]Controller.class)
+class [clase.nombre.toUpperFirst()/]ControllerTest {
+
+	@MockBean
+	private [clase.nombre.toUpperFirst()/]ServiceImpl [clase.nombre.toLowerFirst()/]Service;
+	
+	@Autowired
+	private MockMvc mockMvc;
+
+	@Test
+	void getAllTest() throws Exception {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]2 = new [clase.nombre.toUpperFirst()/]();
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		List<[clase.nombre.toUpperFirst()/]> listaEnviada = new ArrayList();
+		listaEnviada.add([clase.nombre.toLowerFirst()/]1);
+		listaEnviada.add([clase.nombre.toLowerFirst()/]2);
+
+		when([clase.nombre.toLowerFirst()/]Service.findAll()).thenReturn(listaEnviada);
+
+		mockMvc.perform(get("api/v1/[clase.nombre.toLowerFirst()/]s")
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+				.andExpect(jsonPath("$['[0]'/].[a.nombre/]", is(1)))
+				.andExpect(jsonPath("$['[1]'/].[a.nombre/]", is(1)))
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+				.andExpect(jsonPath("$['[0]'/].[a.nombre/]", is("a")))
+				.andExpect(jsonPath("$['[1]'/].[a.nombre/]", is("a")))
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+				.andExpect(jsonPath("$['[0]'/].[a.nombre/]",is(true)));
+				.andExpect(jsonPath("$['[1]'/].[a.nombre/]",is(true)));
+		[/if]
+		[/for]
+
+	}
+
+	@Test
+	void getOneTest() throws Exception {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		when([clase.nombre.toLowerFirst()/]Service.findById(1L)).thenReturn([clase.nombre.toLowerFirst()/]1);
+
+		mockMvc.perform(get("api/v1/[clase.nombre.toLowerFirst()/]s")
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+				.andExpect(jsonPath("$.[a.nombre/]", is(1)))
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+				.andExpect(jsonPath("$.[a.nombre/]", is("a")))
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+				.andExpect(jsonPath("$.[a.nombre/]",is(true)));
+		[/if]
+		[/for]
+
+	}
+
+	@Test
+	void saveTest() throws Exception {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		when([clase.nombre.toLowerFirst()/]Service.save([clase.nombre.toLowerFirst()/]1)).thenReturn([clase.nombre.toLowerFirst()/]1);
+		ObjectMapper om = new ObjectMapper();
+		mockMvc.perform(post("api/v1/[clase.nombre.toLowerFirst()/]s")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(om.writeValueAsString([clase.nombre.toLowerFirst()/]1))
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+				.andExpect(jsonPath("$.[a.nombre/]", is(1)))
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+				.andExpect(jsonPath("$.[a.nombre/]", is("a")))
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+				.andExpect(jsonPath("$.[a.nombre/]",is(true)));
+		[/if]
+		[/for]
+
+	}
+
+	@Test
+	void deleteTest() throws Exception {
+
+		when([clase.nombre.toLowerFirst()/]Service.delete(1L)).thenReturn(true);
+		mockMvc.perform(delete("api/v1/[clase.nombre.toLowerFirst()/]s")
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$",is(true)));
+
+	}
+
+	@Test
+	void updateTest() throws Exception {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		when([clase.nombre.toLowerFirst()/]Service.update([clase.nombre.toLowerFirst()/]1,1L)).thenReturn([clase.nombre.toLowerFirst()/]1);
+		ObjectMapper om = new ObjectMapper();
+		mockMvc.perform(put("api/v1/[clase.nombre.toLowerFirst()/]s")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(om.writeValueAsString([clase.nombre.toLowerFirst()/]1))
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+				.andExpect(jsonPath("$.[a.nombre/]", is(1)))
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+				.andExpect(jsonPath("$.[a.nombre/]", is("a")))
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+				.andExpect(jsonPath("$.[a.nombre/]",is(true)));
+		[/if]
+		[/for]
+
+
+	}
+
+}
+[/file]
+[/if]
+[/for]
+[/for]
+
+[/template]

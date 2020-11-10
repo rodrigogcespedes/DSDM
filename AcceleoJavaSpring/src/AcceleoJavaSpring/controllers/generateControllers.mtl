@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "api/v1/[clase.nombre.toLowerFirst()/]s")
+@RequestMapping(path = "api/v1/[clase.nombre.toLowerFirst()/]")
 public class [clase.nombre/]Controller extends BaseControllerImpl<[clase.nombre/], [clase.nombre/]ServiceImpl>{
 
 

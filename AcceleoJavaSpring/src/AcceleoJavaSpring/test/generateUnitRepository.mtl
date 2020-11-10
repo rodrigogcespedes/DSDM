@@ -1,0 +1,221 @@
+[comment encoding = UTF-8 /]
+[module generateUnitRepository('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateUnitRepository(raiz : DiagramaClases)]
+
+[for (paquete : Package | raiz.packages_contenidos)]
+	
+
+[for (clase : Clase | paquete.clasificadores_contenidos->filter(Clase))]
+
+[if (clase.tieneABM)]
+
+[file ('src/test/java/'+raiz.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+raiz.artefacto_contenido.artefactotId+'/repositories/'+clase.nombre+'RepositoryTest.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].repositories;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;;
+
+import javax.persistence.EntityManager;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/].entities.[clase.nombre.toUpperFirst()/];
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+class [clase.nombre.toUpperFirst()/]RepositoryTest {
+
+	
+	@Autowired
+	private EntityManager entityManager;
+	
+	@Autowired
+	private [clase.nombre.toUpperFirst()/]Repository [clase.nombre.toLowerFirst()/]Repository;
+
+	@Test
+	void findAllTest() {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]2 = new [clase.nombre.toUpperFirst()/]();
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		List<[clase.nombre.toUpperFirst()/]> listaVacia = new ArrayList<>();
+
+		assertEquals(listaVacia, [clase.nombre.toLowerFirst()/]Repository.findAll());
+
+		List<[clase.nombre.toUpperFirst()/]> listaEnviada = new ArrayList();
+		listaEnviada.add([clase.nombre.toLowerFirst()/]1);
+		listaEnviada.add([clase.nombre.toLowerFirst()/]2);
+		
+		entityManager.persist([clase.nombre.toLowerFirst()/]1);
+		entityManager.persist([clase.nombre.toLowerFirst()/]2);
+		entityManager.flush();
+
+
+		assertEquals(listaEnviada, [clase.nombre.toLowerFirst()/]Repository.findAll());
+	}
+
+	@Test
+	void findByIdTest() {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]2 = new [clase.nombre.toUpperFirst()/]();
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+		entityManager.persist([clase.nombre.toLowerFirst()/]1);
+		entityManager.persist([clase.nombre.toLowerFirst()/]2);
+		entityManager.flush();
+
+
+		assertEquals([clase.nombre.toLowerFirst()/]1,[clase.nombre.toLowerFirst()/]Repository.findById(1L).get());
+	}
+
+	@Test
+	void deleteTest() {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]2 = new [clase.nombre.toUpperFirst()/]();
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		List<[clase.nombre.toUpperFirst()/]> listaEnviada = new ArrayList();
+		listaEnviada.add([clase.nombre.toLowerFirst()/]1);
+		listaEnviada.add([clase.nombre.toLowerFirst()/]2);
+
+		entityManager.persist([clase.nombre.toLowerFirst()/]1);
+		entityManager.persist([clase.nombre.toLowerFirst()/]2);
+		entityManager.flush();
+
+		[clase.nombre.toLowerFirst()/]Repository.deleteById(1L);
+
+		assertEquals(1, [clase.nombre.toLowerFirst()/]Repository.findAll().size());
+
+	}
+
+	@Test
+	void saveTest() {
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]1 = new [clase.nombre.toUpperFirst()/]();
+		
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]1.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+		[clase.nombre.toUpperFirst()/] [clase.nombre.toLowerFirst()/]2 = new [clase.nombre.toUpperFirst()/]();
+
+		[for (a : Atributo | clase.atributos_contenidos)]
+		[if (a.tipo = TipoDato::int or a.tipo = TipoDato::float or a.tipo = TipoDato::double or a.tipo = TipoDato::byte)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](1);
+		[/if]
+		[if (a.tipo = TipoDato::String or a.tipo = TipoDato::Date or a.tipo = TipoDato::char)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/]("a");
+		[/if]
+		[if (a.tipo = TipoDato::boolean)]
+					[clase.nombre.toLowerFirst()/]2.set[a.nombre.toUpperFirst()/](true);
+		[/if]
+		[/for]
+
+
+		List<[clase.nombre.toUpperFirst()/]> listaEnviada = new ArrayList();
+		listaEnviada.add([clase.nombre.toLowerFirst()/]1);
+		listaEnviada.add([clase.nombre.toLowerFirst()/]2);
+
+		
+		entityManager.persist([clase.nombre.toLowerFirst()/]1);
+		[clase.nombre.toLowerFirst()/]Repository.save([clase.nombre.toLowerFirst()/]2);
+		entityManager.flush();
+
+		assertEquals(listaEnviada, [clase.nombre.toLowerFirst()/]2Repository.findAll());
+	}
+
+}
+[/file]
+[/if]
+[/for]
+[/for]
+
+[/template]
