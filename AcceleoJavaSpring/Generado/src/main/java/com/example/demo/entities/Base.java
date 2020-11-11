@@ -1,11 +1,4 @@
-[comment encoding = UTF-8 /]
-[module generateBaseEntity('http://www.example.org/diagramaClasesCompleto')]
-
-
-[template public generateBaseEntity(aDiagramaClases : DiagramaClases)]
-
-[file ('src/main/java/'+aDiagramaClases.artefacto_contenido.grupoId.substituteAll('.', '/')+'/'+aDiagramaClases.artefacto_contenido.artefactotId+'/entities/Base.java', false, 'UTF-8')]
-package [aDiagramaClases.artefacto_contenido.grupoId/].[aDiagramaClases.artefacto_contenido.artefactotId/].entities;
+package com.example.demo.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 
 @MappedSuperclass
 @Getter
@@ -38,5 +30,3 @@ public class Base implements Serializable {
 
 
 
-[/file]
-[/template]

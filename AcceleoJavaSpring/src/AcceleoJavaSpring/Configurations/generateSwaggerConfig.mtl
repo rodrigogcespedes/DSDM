@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 /*
-http://[d.configuraciondb.ip/]:[d.configuraciondb.serverPuerto/]/swagger-ui/index.html
+http://[d.configuraciondb.ip/]:[d.configuraciondb.serverPuerto/]/swagger-ui.html
 http://[d.configuraciondb.ip/]:[d.configuraciondb.serverPuerto/]/v2/api-docs
  */
     @Bean
