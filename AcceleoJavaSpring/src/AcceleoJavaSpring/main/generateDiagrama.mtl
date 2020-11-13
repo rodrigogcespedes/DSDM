@@ -36,8 +36,6 @@
 [generateRevision(d)/]
 [generateSwaggerConfig(d)/]
 [generateCustomRevisionListener(d)/]
-[generateUnitController(d)/]
-[generateUnitRepository(d)/]
-[generateUnitService(d)/]
+
 
 [/template]
