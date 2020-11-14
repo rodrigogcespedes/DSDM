@@ -640,6 +640,16 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRelacion_Subordinada() {
+		return (EAttribute) relacionEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getOperacion() {
 		return operacionEClass;
 	}
@@ -1389,6 +1399,7 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 		createEAttribute(relacionEClass, RELACION__ES_STATIC);
 		createEAttribute(relacionEClass, RELACION__VISIBILIDAD);
 		createEAttribute(relacionEClass, RELACION__TIPO_ABM);
+		createEAttribute(relacionEClass, RELACION__SUBORDINADA);
 
 		operacionEClass = createEClass(OPERACION);
 		createEAttribute(operacionEClass, OPERACION__TIPO_RETORNO);
@@ -1519,13 +1530,13 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 				1, 1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDiagramaClases_Configuraciondb(), this.getConfiguracionDB(), null, "configuraciondb", null, 0,
-				-1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDiagramaClases_Configuraciondocker(), this.getConfiguracionDocker(), null,
-				"configuraciondocker", null, 0, -1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"configuraciondocker", null, 0, 1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDiagramaClases_Configuracionlenguaje(), this.getConfiguracionLenguaje(), null,
-				"configuracionlenguaje", null, 0, -1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"configuracionlenguaje", null, 0, 1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDiagramaClases_Configuracionmicroservicios(), this.getConfiguracionMicroservicios(), null,
 				"configuracionmicroservicios", null, 0, -1, DiagramaClases.class, !IS_TRANSIENT, !IS_VOLATILE,
@@ -1590,6 +1601,8 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 				Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", "sinRepresentacion", 0, 1, Relacion.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelacion_Subordinada(), ecorePackage.getEBoolean(), "subordinada", null, 0, 1, Relacion.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operacionEClass, Operacion.class, "Operacion", !IS_ABSTRACT, !IS_INTERFACE,

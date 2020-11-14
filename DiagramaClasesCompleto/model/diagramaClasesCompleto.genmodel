@@ -127,6 +127,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/esStatic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/visibilidad"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/tipoABM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Relacion/subordinada"/>
     </genClasses>
     <genClasses ecoreClass="diagramaClasesCompleto.ecore#//Operacion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diagramaClasesCompleto.ecore#//Operacion/tipoRetorno"/>

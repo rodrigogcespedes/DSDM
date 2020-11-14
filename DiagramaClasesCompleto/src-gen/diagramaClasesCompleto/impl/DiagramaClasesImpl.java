@@ -66,34 +66,34 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 	protected Artefacto artefacto_contenido;
 
 	/**
-	 * The cached value of the '{@link #getConfiguraciondb() <em>Configuraciondb</em>}' containment reference list.
+	 * The cached value of the '{@link #getConfiguraciondb() <em>Configuraciondb</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConfiguraciondb()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConfiguracionDB> configuraciondb;
+	protected ConfiguracionDB configuraciondb;
 
 	/**
-	 * The cached value of the '{@link #getConfiguraciondocker() <em>Configuraciondocker</em>}' containment reference list.
+	 * The cached value of the '{@link #getConfiguraciondocker() <em>Configuraciondocker</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConfiguraciondocker()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConfiguracionDocker> configuraciondocker;
+	protected ConfiguracionDocker configuraciondocker;
 
 	/**
-	 * The cached value of the '{@link #getConfiguracionlenguaje() <em>Configuracionlenguaje</em>}' containment reference list.
+	 * The cached value of the '{@link #getConfiguracionlenguaje() <em>Configuracionlenguaje</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConfiguracionlenguaje()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConfiguracionLenguaje> configuracionlenguaje;
+	protected ConfiguracionLenguaje configuracionlenguaje;
 
 	/**
 	 * The cached value of the '{@link #getConfiguracionmicroservicios() <em>Configuracionmicroservicios</em>}' containment reference list.
@@ -201,11 +201,7 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public EList<ConfiguracionDB> getConfiguraciondb() {
-		if (configuraciondb == null) {
-			configuraciondb = new EObjectContainmentEList<ConfiguracionDB>(ConfiguracionDB.class, this,
-					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB);
-		}
+	public ConfiguracionDB getConfiguraciondb() {
 		return configuraciondb;
 	}
 
@@ -214,13 +210,19 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ConfiguracionDocker> getConfiguraciondocker() {
-		if (configuraciondocker == null) {
-			configuraciondocker = new EObjectContainmentEList<ConfiguracionDocker>(ConfiguracionDocker.class, this,
-					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER);
+	public NotificationChain basicSetConfiguraciondb(ConfiguracionDB newConfiguraciondb, NotificationChain msgs) {
+		ConfiguracionDB oldConfiguraciondb = configuraciondb;
+		configuraciondb = newConfiguraciondb;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB, oldConfiguraciondb,
+					newConfiguraciondb);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return configuraciondocker;
+		return msgs;
 	}
 
 	/**
@@ -229,12 +231,138 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public EList<ConfiguracionLenguaje> getConfiguracionlenguaje() {
-		if (configuracionlenguaje == null) {
-			configuracionlenguaje = new EObjectContainmentEList<ConfiguracionLenguaje>(ConfiguracionLenguaje.class,
-					this, DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE);
+	public void setConfiguraciondb(ConfiguracionDB newConfiguraciondb) {
+		if (newConfiguraciondb != configuraciondb) {
+			NotificationChain msgs = null;
+			if (configuraciondb != null)
+				msgs = ((InternalEObject) configuraciondb).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB, null,
+						msgs);
+			if (newConfiguraciondb != null)
+				msgs = ((InternalEObject) newConfiguraciondb).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB, null,
+						msgs);
+			msgs = basicSetConfiguraciondb(newConfiguraciondb, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB, newConfiguraciondb,
+					newConfiguraciondb));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ConfiguracionDocker getConfiguraciondocker() {
+		return configuraciondocker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConfiguraciondocker(ConfiguracionDocker newConfiguraciondocker,
+			NotificationChain msgs) {
+		ConfiguracionDocker oldConfiguraciondocker = configuraciondocker;
+		configuraciondocker = newConfiguraciondocker;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER, oldConfiguraciondocker,
+					newConfiguraciondocker);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConfiguraciondocker(ConfiguracionDocker newConfiguraciondocker) {
+		if (newConfiguraciondocker != configuraciondocker) {
+			NotificationChain msgs = null;
+			if (configuraciondocker != null)
+				msgs = ((InternalEObject) configuraciondocker).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER,
+						null, msgs);
+			if (newConfiguraciondocker != null)
+				msgs = ((InternalEObject) newConfiguraciondocker).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER,
+						null, msgs);
+			msgs = basicSetConfiguraciondocker(newConfiguraciondocker, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER, newConfiguraciondocker,
+					newConfiguraciondocker));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ConfiguracionLenguaje getConfiguracionlenguaje() {
 		return configuracionlenguaje;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConfiguracionlenguaje(ConfiguracionLenguaje newConfiguracionlenguaje,
+			NotificationChain msgs) {
+		ConfiguracionLenguaje oldConfiguracionlenguaje = configuracionlenguaje;
+		configuracionlenguaje = newConfiguracionlenguaje;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE, oldConfiguracionlenguaje,
+					newConfiguracionlenguaje);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConfiguracionlenguaje(ConfiguracionLenguaje newConfiguracionlenguaje) {
+		if (newConfiguracionlenguaje != configuracionlenguaje) {
+			NotificationChain msgs = null;
+			if (configuracionlenguaje != null)
+				msgs = ((InternalEObject) configuracionlenguaje).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE,
+						null, msgs);
+			if (newConfiguracionlenguaje != null)
+				msgs = ((InternalEObject) newConfiguracionlenguaje).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE,
+						null, msgs);
+			msgs = basicSetConfiguracionlenguaje(newConfiguracionlenguaje, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE, newConfiguracionlenguaje,
+					newConfiguracionlenguaje));
 	}
 
 	/**
@@ -265,11 +393,11 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__ARTEFACTO_CONTENIDO:
 			return basicSetArtefacto_contenido(null, msgs);
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB:
-			return ((InternalEList<?>) getConfiguraciondb()).basicRemove(otherEnd, msgs);
+			return basicSetConfiguraciondb(null, msgs);
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER:
-			return ((InternalEList<?>) getConfiguraciondocker()).basicRemove(otherEnd, msgs);
+			return basicSetConfiguraciondocker(null, msgs);
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE:
-			return ((InternalEList<?>) getConfiguracionlenguaje()).basicRemove(otherEnd, msgs);
+			return basicSetConfiguracionlenguaje(null, msgs);
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONMICROSERVICIOS:
 			return ((InternalEList<?>) getConfiguracionmicroservicios()).basicRemove(otherEnd, msgs);
 		}
@@ -317,16 +445,13 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 			setArtefacto_contenido((Artefacto) newValue);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB:
-			getConfiguraciondb().clear();
-			getConfiguraciondb().addAll((Collection<? extends ConfiguracionDB>) newValue);
+			setConfiguraciondb((ConfiguracionDB) newValue);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER:
-			getConfiguraciondocker().clear();
-			getConfiguraciondocker().addAll((Collection<? extends ConfiguracionDocker>) newValue);
+			setConfiguraciondocker((ConfiguracionDocker) newValue);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE:
-			getConfiguracionlenguaje().clear();
-			getConfiguracionlenguaje().addAll((Collection<? extends ConfiguracionLenguaje>) newValue);
+			setConfiguracionlenguaje((ConfiguracionLenguaje) newValue);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONMICROSERVICIOS:
 			getConfiguracionmicroservicios().clear();
@@ -351,13 +476,13 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 			setArtefacto_contenido((Artefacto) null);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB:
-			getConfiguraciondb().clear();
+			setConfiguraciondb((ConfiguracionDB) null);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER:
-			getConfiguraciondocker().clear();
+			setConfiguraciondocker((ConfiguracionDocker) null);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE:
-			getConfiguracionlenguaje().clear();
+			setConfiguracionlenguaje((ConfiguracionLenguaje) null);
 			return;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONMICROSERVICIOS:
 			getConfiguracionmicroservicios().clear();
@@ -379,11 +504,11 @@ public class DiagramaClasesImpl extends MinimalEObjectImpl.Container implements 
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__ARTEFACTO_CONTENIDO:
 			return artefacto_contenido != null;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDB:
-			return configuraciondb != null && !configuraciondb.isEmpty();
+			return configuraciondb != null;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONDOCKER:
-			return configuraciondocker != null && !configuraciondocker.isEmpty();
+			return configuraciondocker != null;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONLENGUAJE:
-			return configuracionlenguaje != null && !configuracionlenguaje.isEmpty();
+			return configuracionlenguaje != null;
 		case DiagramaClasesCompletoPackage.DIAGRAMA_CLASES__CONFIGURACIONMICROSERVICIOS:
 			return configuracionmicroservicios != null && !configuracionmicroservicios.isEmpty();
 		}

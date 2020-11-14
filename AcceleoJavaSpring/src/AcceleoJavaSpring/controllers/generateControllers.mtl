@@ -1,8 +1,6 @@
 [comment encoding = UTF-8 /]
 [module generateControllers('http://www.example.org/diagramaClasesCompleto')]
 
-[import AcceleoJavaSpring::controllers::generateJSONAtributte/]
-
 [template public generateControllers(raiz : DiagramaClases)]
 
 

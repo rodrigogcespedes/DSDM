@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#isEsStatic <em>Es Static</em>}</li>
  *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#getTipoABM <em>Tipo ABM</em>}</li>
+ *   <li>{@link diagramaClasesCompleto.impl.RelacionImpl#isSubordinada <em>Subordinada</em>}</li>
  * </ul>
  *
  * @generated
@@ -219,6 +220,26 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @ordered
 	 */
 	protected TipoABM tipoABM = TIPO_ABM_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isSubordinada() <em>Subordinada</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSubordinada()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SUBORDINADA_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isSubordinada() <em>Subordinada</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSubordinada()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean subordinada = SUBORDINADA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -511,6 +532,30 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @generated
 	 */
 	@Override
+	public boolean isSubordinada() {
+		return subordinada;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSubordinada(boolean newSubordinada) {
+		boolean oldSubordinada = subordinada;
+		subordinada = newSubordinada;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DiagramaClasesCompletoPackage.RELACION__SUBORDINADA,
+					oldSubordinada, subordinada));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DiagramaClasesCompletoPackage.RELACION__CLASES_ASOCIATIVAS_CONTENIDAS:
@@ -551,6 +596,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 			return getVisibilidad();
 		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
 			return getTipoABM();
+		case DiagramaClasesCompletoPackage.RELACION__SUBORDINADA:
+			return isSubordinada();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -595,6 +642,9 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
 			setTipoABM((TipoABM) newValue);
 			return;
+		case DiagramaClasesCompletoPackage.RELACION__SUBORDINADA:
+			setSubordinada((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -637,6 +687,9 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
 			setTipoABM(TIPO_ABM_EDEFAULT);
 			return;
+		case DiagramaClasesCompletoPackage.RELACION__SUBORDINADA:
+			setSubordinada(SUBORDINADA_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -669,6 +722,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 			return visibilidad != VISIBILIDAD_EDEFAULT;
 		case DiagramaClasesCompletoPackage.RELACION__TIPO_ABM:
 			return tipoABM != TIPO_ABM_EDEFAULT;
+		case DiagramaClasesCompletoPackage.RELACION__SUBORDINADA:
+			return subordinada != SUBORDINADA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -698,6 +753,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		result.append(visibilidad);
 		result.append(", tipoABM: ");
 		result.append(tipoABM);
+		result.append(", subordinada: ");
+		result.append(subordinada);
 		result.append(')');
 		return result.toString();
 	}

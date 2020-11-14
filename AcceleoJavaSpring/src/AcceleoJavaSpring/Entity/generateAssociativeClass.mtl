@@ -24,6 +24,7 @@
 	import lombok.Builder;
 	import lombok.Data;
 	import lombok.NoArgsConstructor;
+	import [d.artefacto_contenido.grupoId/].[d.artefacto_contenido.artefactotId/].entities.Base;
 
 
 	@Entity

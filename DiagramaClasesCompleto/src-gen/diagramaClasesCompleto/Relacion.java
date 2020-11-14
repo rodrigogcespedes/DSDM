@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagramaClasesCompleto.Relacion#isEsStatic <em>Es Static</em>}</li>
  *   <li>{@link diagramaClasesCompleto.Relacion#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link diagramaClasesCompleto.Relacion#getTipoABM <em>Tipo ABM</em>}</li>
+ *   <li>{@link diagramaClasesCompleto.Relacion#isSubordinada <em>Subordinada</em>}</li>
  * </ul>
  *
  * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion()
@@ -255,5 +256,27 @@ public interface Relacion extends EObject {
 	 * @generated
 	 */
 	void setTipoABM(TipoABM value);
+
+	/**
+	 * Returns the value of the '<em><b>Subordinada</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subordinada</em>' attribute.
+	 * @see #setSubordinada(boolean)
+	 * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion_Subordinada()
+	 * @model
+	 * @generated
+	 */
+	boolean isSubordinada();
+
+	/**
+	 * Sets the value of the '{@link diagramaClasesCompleto.Relacion#isSubordinada <em>Subordinada</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Subordinada</em>' attribute.
+	 * @see #isSubordinada()
+	 * @generated
+	 */
+	void setSubordinada(boolean value);
 
 } // Relacion

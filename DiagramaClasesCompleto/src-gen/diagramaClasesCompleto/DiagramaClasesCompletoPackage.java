@@ -86,7 +86,7 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int DIAGRAMA_CLASES__ARTEFACTO_CONTENIDO = 1;
 
 	/**
-	 * The feature id for the '<em><b>Configuraciondb</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Configuraciondb</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,7 +95,7 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int DIAGRAMA_CLASES__CONFIGURACIONDB = 2;
 
 	/**
-	 * The feature id for the '<em><b>Configuraciondocker</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Configuraciondocker</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,7 +104,7 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int DIAGRAMA_CLASES__CONFIGURACIONDOCKER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Configuracionlenguaje</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Configuracionlenguaje</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -486,13 +486,22 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	int RELACION__TIPO_ABM = 9;
 
 	/**
+	 * The feature id for the '<em><b>Subordinada</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELACION__SUBORDINADA = 10;
+
+	/**
 	 * The number of structural features of the '<em>Relacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELACION_FEATURE_COUNT = 10;
+	int RELACION_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Relacion</em>' class.
@@ -1488,10 +1497,10 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	EReference getDiagramaClases_Artefacto_contenido();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link diagramaClasesCompleto.DiagramaClases#getConfiguraciondb <em>Configuraciondb</em>}'.
+	 * Returns the meta object for the containment reference '{@link diagramaClasesCompleto.DiagramaClases#getConfiguraciondb <em>Configuraciondb</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Configuraciondb</em>'.
+	 * @return the meta object for the containment reference '<em>Configuraciondb</em>'.
 	 * @see diagramaClasesCompleto.DiagramaClases#getConfiguraciondb()
 	 * @see #getDiagramaClases()
 	 * @generated
@@ -1499,10 +1508,10 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	EReference getDiagramaClases_Configuraciondb();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link diagramaClasesCompleto.DiagramaClases#getConfiguraciondocker <em>Configuraciondocker</em>}'.
+	 * Returns the meta object for the containment reference '{@link diagramaClasesCompleto.DiagramaClases#getConfiguraciondocker <em>Configuraciondocker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Configuraciondocker</em>'.
+	 * @return the meta object for the containment reference '<em>Configuraciondocker</em>'.
 	 * @see diagramaClasesCompleto.DiagramaClases#getConfiguraciondocker()
 	 * @see #getDiagramaClases()
 	 * @generated
@@ -1510,10 +1519,10 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	EReference getDiagramaClases_Configuraciondocker();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link diagramaClasesCompleto.DiagramaClases#getConfiguracionlenguaje <em>Configuracionlenguaje</em>}'.
+	 * Returns the meta object for the containment reference '{@link diagramaClasesCompleto.DiagramaClases#getConfiguracionlenguaje <em>Configuracionlenguaje</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Configuracionlenguaje</em>'.
+	 * @return the meta object for the containment reference '<em>Configuracionlenguaje</em>'.
 	 * @see diagramaClasesCompleto.DiagramaClases#getConfiguracionlenguaje()
 	 * @see #getDiagramaClases()
 	 * @generated
@@ -1790,6 +1799,17 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRelacion_TipoABM();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagramaClasesCompleto.Relacion#isSubordinada <em>Subordinada</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Subordinada</em>'.
+	 * @see diagramaClasesCompleto.Relacion#isSubordinada()
+	 * @see #getRelacion()
+	 * @generated
+	 */
+	EAttribute getRelacion_Subordinada();
 
 	/**
 	 * Returns the meta object for class '{@link diagramaClasesCompleto.Operacion <em>Operacion</em>}'.
@@ -2575,7 +2595,7 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		EReference DIAGRAMA_CLASES__ARTEFACTO_CONTENIDO = eINSTANCE.getDiagramaClases_Artefacto_contenido();
 
 		/**
-		 * The meta object literal for the '<em><b>Configuraciondb</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Configuraciondb</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2583,7 +2603,7 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		EReference DIAGRAMA_CLASES__CONFIGURACIONDB = eINSTANCE.getDiagramaClases_Configuraciondb();
 
 		/**
-		 * The meta object literal for the '<em><b>Configuraciondocker</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Configuraciondocker</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2591,7 +2611,7 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		EReference DIAGRAMA_CLASES__CONFIGURACIONDOCKER = eINSTANCE.getDiagramaClases_Configuraciondocker();
 
 		/**
-		 * The meta object literal for the '<em><b>Configuracionlenguaje</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Configuracionlenguaje</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2806,6 +2826,14 @@ public interface DiagramaClasesCompletoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RELACION__TIPO_ABM = eINSTANCE.getRelacion_TipoABM();
+
+		/**
+		 * The meta object literal for the '<em><b>Subordinada</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RELACION__SUBORDINADA = eINSTANCE.getRelacion_Subordinada();
 
 		/**
 		 * The meta object literal for the '{@link diagramaClasesCompleto.impl.OperacionImpl <em>Operacion</em>}' class.
