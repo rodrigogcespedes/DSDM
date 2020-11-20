@@ -259,12 +259,13 @@ public interface Relacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Subordinada</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subordinada</em>' attribute.
 	 * @see #setSubordinada(boolean)
 	 * @see diagramaClasesCompleto.DiagramaClasesCompletoPackage#getRelacion_Subordinada()
-	 * @model
+	 * @model default="true"
 	 * @generated
 	 */
 	boolean isSubordinada();

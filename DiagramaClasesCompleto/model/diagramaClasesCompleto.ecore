@@ -50,7 +50,8 @@
         defaultValueLiteral="private"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoABM" eType="#//TipoABM"
         defaultValueLiteral="sinRepresentacion"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subordinada" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subordinada" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operacion" eSuperTypes="#//Retornable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoRetorno" eType="#//TipoRetorno"/>

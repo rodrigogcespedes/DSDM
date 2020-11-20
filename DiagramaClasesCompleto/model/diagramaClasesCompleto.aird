@@ -4,7 +4,7 @@
     <semanticResources>diagramaClasesCompleto.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_WN_lEPCLEeqUW9KVUPtBCQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_WeQTofenEeqc24r4kbW6YA" name="diagramaClasesCompleto class diagram" repPath="#_WeFUgPenEeqc24r4kbW6YA" changeId="15293daa-1f21-45d0-a001-2a9471d69620">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_WeQTofenEeqc24r4kbW6YA" name="diagramaClasesCompleto class diagram" repPath="#_WeFUgPenEeqc24r4kbW6YA" changeId="968f8e14-0cb4-41ec-9ed5-5df163f40d5e">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="diagramaClasesCompleto.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1309,7 +1309,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_ZVyCwCX8EeuILqqrnkMLjg" name="subordinada : EBoolean = false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_ZVyCwCX8EeuILqqrnkMLjg" name="subordinada : EBoolean = true" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="diagramaClasesCompleto.ecore#//Relacion/subordinada"/>
         <semanticElements xmi:type="ecore:EAttribute" href="diagramaClasesCompleto.ecore#//Relacion/subordinada"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_wxnaESYHEeuILqqrnkMLjg" labelAlignment="LEFT">

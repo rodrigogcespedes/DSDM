@@ -229,7 +229,7 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean SUBORDINADA_EDEFAULT = false;
+	protected static final boolean SUBORDINADA_EDEFAULT = true;
 
 	/**
 	 * The cached value of the '{@link #isSubordinada() <em>Subordinada</em>}' attribute.

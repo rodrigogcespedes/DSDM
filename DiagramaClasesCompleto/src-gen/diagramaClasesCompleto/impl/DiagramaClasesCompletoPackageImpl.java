@@ -1602,8 +1602,9 @@ public class DiagramaClasesCompletoPackageImpl extends EPackageImpl implements D
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelacion_TipoABM(), this.getTipoABM(), "tipoABM", "sinRepresentacion", 0, 1, Relacion.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRelacion_Subordinada(), ecorePackage.getEBoolean(), "subordinada", null, 0, 1, Relacion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelacion_Subordinada(), ecorePackage.getEBoolean(), "subordinada", "true", 0, 1,
+				Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(operacionEClass, Operacion.class, "Operacion", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
