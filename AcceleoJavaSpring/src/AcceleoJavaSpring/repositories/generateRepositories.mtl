@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[module generateRepositories('http://www.example.org/diagramaClasesCompleto')]
+[import AcceleoJavaSpring::repositories::generateBaseRepository/]
+
+[template public generateRepositories(c : Clase, art : Artefacto,p : Package)]
+[file ('src/main/java/'+art.grupoId+'.'+art.artefactotId+'/repositories/'+c.nombre+'Repository.java', false, 'UTF-8')]
+package [art.grupoId/].[art.artefactotId/].repositories;
+import [art.grupoId/].[art.artefactotId/].entities.[p.nombre/].[c.nombre/];
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface [c.nombre/]Repository extends BaseRepository<[c.nombre/], Long>{
+
+}
+[/file]
+[/template]

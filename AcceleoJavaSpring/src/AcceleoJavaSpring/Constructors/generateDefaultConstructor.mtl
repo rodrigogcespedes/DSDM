@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module generateDefaultConstructor('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateDefaultConstructor(raiz : Clase)]
+	public [raiz.nombre/] (){}
+[/template]

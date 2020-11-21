@@ -1,0 +1,49 @@
+[comment encoding = UTF-8 /]
+[module generateOperation('http://www.example.org/diagramaClasesCompleto')]
+
+[import AcceleoJavaSpring::Entity::generateParameters /]
+
+
+[template public generateOperation(c : Clasificador)]
+[if (c.oclIsTypeOf(Clase))]
+[for (o : Operacion | c.operaciones_contenidas)]
+[o.visibilidad/] [if (o.esStatic)]static[/if] [if (o.esFinal)]final[/if] [o.tipoRetorno/] [o.nombre/]([generateParameters(c)/]){
+
+[if (o.tipoRetorno.toString() = 'void')]
+[else]
+	return[if (o.tipoRetorno.toString() = 'float')] 0
+[elseif (o.tipoRetorno.toString() = 'int')] 0
+[elseif (o.tipoRetorno.toString() = 'double')] 0
+[elseif (o.tipoRetorno.toString() = 'char')] ''
+[elseif (o.tipoRetorno.toString() = 'byte')] 0
+[elseif (o.tipoRetorno.toString() = 'boolean')] false
+[elseif (o.tipoRetorno.toString() = 'String')] null
+[elseif (o.tipoRetorno.toString() = 'Date')] null
+	[/if];
+[/if]
+}
+[/for]
+[else]
+[for (o : Operacion | c.operaciones_contenidas)] 
+[if (o.esStatic)]
+public static [o.tipoRetorno/] [o.nombre/]([generateParameters(c)/]){
+
+[if (o.tipoRetorno.toString() = 'void')]
+[else]
+	return[if (o.tipoRetorno.toString() = 'float')] 0
+[elseif (o.tipoRetorno.toString() = 'int')] 0
+[elseif (o.tipoRetorno.toString() = 'double')] 0
+[elseif (o.tipoRetorno.toString() = 'char')] ''
+[elseif (o.tipoRetorno.toString() = 'byte')] 0
+[elseif (o.tipoRetorno.toString() = 'boolean')] false
+[elseif (o.tipoRetorno.toString() = 'String')] null
+[elseif (o.tipoRetorno.toString() = 'Date')] null
+	[/if];
+[/if]
+}
+[else]
+public [o.tipoRetorno/] [o.nombre/]([generateParameters(c)/]);
+[/if]
+[/for]
+[/if]
+[/template]

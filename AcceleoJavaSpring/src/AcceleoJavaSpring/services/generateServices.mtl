@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[module generateServices('http://www.example.org/diagramaClasesCompleto')]
+[import AcceleoJavaSpring::services::generateBaseService/]
+
+[template public generateServices(c : Clase, art : Artefacto, p : Package)]
+[file ('src/main/java/'+art.grupoId+'.'+art.artefactotId+'/services/'+c.nombre+'Service.java', false, 'UTF-8')]
+package [art.grupoId/].[art.artefactotId/].services;
+import [art.grupoId/].[art.artefactotId/].entities.[p.nombre/].[c.nombre/];
+
+public interface [c.nombre/]Service extends BaseService<[c.nombre/],Long>{
+}
+
+[/file]
+
+[file ('src/main/java/'+art.grupoId+'.'+art.artefactotId+'/services/'+c.nombre+'ServiceImpl.java', false, 'UTF-8')]
+package [art.grupoId/].[art.artefactotId/].services;
+
+import [art.grupoId/].[art.artefactotId/].entities.[p.nombre/].[c.nombre/];
+import [art.grupoId/].[art.artefactotId/].repositories.BaseRepository;
+import [art.grupoId/].[art.artefactotId/].repositories.[c.nombre/]Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class [c.nombre/]ServiceImpl extends BaseServiceImpl<[c.nombre/],Long> implements [c.nombre/]Service{
+
+	@Autowired
+	private [c.nombre/]Repository [c.nombre/]Repository;
+	
+	public [c.nombre/]ServiceImpl(BaseRepository<[c.nombre/], Long> baseRepository){
+        super(baseRepository);
+    }
+}
+[/file]
+[/template]

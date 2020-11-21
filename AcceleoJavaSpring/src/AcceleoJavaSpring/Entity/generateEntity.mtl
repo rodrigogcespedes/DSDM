@@ -1,0 +1,117 @@
+[comment encoding = UTF-8 /]
+[module generateEntity('http://www.example.org/diagramaClasesCompleto')]
+[import AcceleoJavaSpring::Property::generateProperty/]
+[import AcceleoJavaSpring::Operation::generateOperation/]
+[import AcceleoJavaSpring::Relation::generateRelation/]
+[import AcceleoJavaSpring::Relation::generateImplementation/]
+[import AcceleoJavaSpring::Relation::generateExtension/]
+[import AcceleoJavaSpring::controllers::generateEntityController /]
+[import AcceleoJavaSpring::Relation::generateRelationNotation /]
+[import AcceleoJavaSpring::services::generateServices /]
+[import AcceleoJavaSpring::repositories::generateRepositories /]
+
+
+[template public generateEntity(c : Clase, art: Artefacto, p : Package, r : Relacion)]
+[file ('src/main/java/'+art.grupoId+'.'+art.artefactotId+'/entities/'+p.nombre+'/'+c.nombre+'.java', false, 'UTF-8')]
+package [art.grupoId/].[art.artefactotId/].entities.[p.nombre/];
+
+
+import [art.grupoId/].[art.artefactotId/].entities.BaseEntity;
+
+[if (not (c.relaciones_contenidas->isEmpty()) or r <> null)]
+import javax.persistence.JoinColumn;
+import javax.persistence.CascadeType;
+[if (c.relaciones_contenidas->exists(multiplicidad = Multiplicidad::oneToOne))]
+import javax.persistence.OneToOne;
+[/if]
+[if (c.relaciones_contenidas->exists(multiplicidad = Multiplicidad::oneToMany))]
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
+import lombok.Builder.Default;
+[/if]
+[if (c.relaciones_contenidas->exists(multiplicidad = Multiplicidad::manyToOne) or (r <> null))]
+import javax.persistence.ManyToOne;
+[/if]
+[if (c.relaciones_contenidas->exists(multiplicidad = Multiplicidad::manyToMany))]
+import javax.persistence.ManyToMany;
+[if (not(c.relaciones_contenidas->exists(multiplicidad = Multiplicidad::oneToMany)))]
+import javax.persistence.JoinTable;
+import java.util.ArrayList;
+import java.util.List;
+import lombok.Builder.Default;
+[/if]
+[/if]
+[/if]
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+[if (c.esAuditable)]import org.hibernate.envers.Audited;[/if]
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+[for (relacion_otro_package : Relacion | c.relaciones_contenidas)]
+[if ((c.eContainer(Package).nombre <> relacion_otro_package.destino.eContainer(Package).nombre))]
+import [art.grupoId/].[art.artefactotId/].entities.[relacion_otro_package.destino.eContainer(Package).nombre/].[relacion_otro_package.destino.nombre/];
+[/if]
+[/for]
+[if ((c.eContainer(Package).nombre <> r.destino.eContainer(Package).nombre))]
+import [art.grupoId/].[art.artefactotId/].entities.[r.destino.eContainer(Package).nombre/].[r.destino.nombre/];
+[/if]
+
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+import org.hibernate.envers.NotAudited;
+
+[if (c.esSuperClase = true and c.esAbstracta = true)]
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Inheritance(strategy = InheritanceType.[c.EstrategiaHerencia/])
+[elseif (c.esSuperClase = true and c.esAbstracta = false)]
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Inheritance(strategy = InheritanceType.[c.EstrategiaHerencia/])
+@Builder
+[/if]
+[if (c.herencias_contenidas -> first().destino.oclAsType(Clase).esAbstracta = true)]
+@Builder
+[/if]
+[if (c.herencias_contenidas -> isEmpty() and c.esSuperClase = false)]
+@Builder
+[/if]
+
+@Entity
+@Table(name= "[c.nombre/]")
+@NoArgsConstructor
+[if (c.atributos_contenidos -> notEmpty())]
+@AllArgsConstructor
+[/if]
+@Data
+[if (c.esAuditable)]@Audited[/if]
+public [if(c.esAbstracta)]abstract[/if] class [c.nombre/] [generateExtension(c)/] [generateImplementation(c)/] {
+
+	[if (r <> null and c.esAsociativa = true)]
+		[generateAssociativeClassManyToOne(r.destino)/]
+		[r.visibilidad/][if (r.esFinal)] final [/if][if (r.esStatic)] static [/if] [r.destino.nombre/] [r.destino.nombre.toLower()/] = new [r.destino.nombre/]();
+
+		[generateAssociativeClassManyToOne(r.origen)/]
+		[r.visibilidad/][if (r.esFinal)] final [/if][if (r.esStatic)] static [/if] [r.origen.nombre/] [r.origen.nombre.toLower()/] = new [r.origen.nombre/]();
+	[/if]
+
+	[generateProperty(c)/]
+	[generateRelation(c, art, p)/]
+	[generateOperation(c)/]
+	[if (c.tieneABM)]
+	[generateEntityController(c, art, p)/]
+	[generateServices(c, art, p)/]
+	[generateRepositories(c, art, p)/]
+	[/if]
+}
+[/file]
+[/template]

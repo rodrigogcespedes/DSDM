@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module generateParameters('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateParameters(c : Clasificador)]
+[for (a : Atributo | c.operaciones_contenidas.parametros_contenidos->filter(Atributo)) separator (',')][a.tipo/] [a.nombre/][/for]
+[/template]

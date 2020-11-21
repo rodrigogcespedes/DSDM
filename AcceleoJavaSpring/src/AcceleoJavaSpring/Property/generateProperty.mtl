@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module generateProperty('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateProperty(c : Clase)]
+[for (a : Atributo | c.atributos_contenidos)]
+[if (a.pseudonimo='' or a.pseudonimo=null)] 
+[else]
+@Column (name = "[a.pseudonimo/]")
+[/if]
+[if (a.esAuditable = false and a.eContainer(Clase).esAuditable = true)]
+@NotAudited
+[/if]
+[if (a.esFinal)]
+	[a.visibilidad/][if (a.esStatic)] static[/if] final [a.tipo/] [a.nombre/]=
+	[if (a.tipo.toString()='int')]0;
+	[elseif (a.tipo.toString()='float')]0;
+	[elseif (a.tipo.toString()='double')]0;
+	[elseif (a.tipo.toString()='byte')]0;
+	[elseif (a.tipo.toString()='char')]0;
+	[elseif (a.tipo.toString()='String')]null;
+	[elseif (a.tipo.toString()='boolean')]false;
+	[elseif (a.tipo.toString()='Date')]new Date();
+	[/if]
+[else]
+	[a.visibilidad/] [if (a.esStatic)]static[/if] [a.tipo/] [a.nombre/];
+[/if]
+[/for]
+[/template]

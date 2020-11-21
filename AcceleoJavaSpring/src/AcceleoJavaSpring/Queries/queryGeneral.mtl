@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module queryGeneral('http://www.example.org/diagramaClasesCompleto')]
+
+
+[query public queryGeneral (anArtefacto : Artefacto) : OclAny = self/]
+
+[query public isClassAssociative(class : Clase) : Boolean = self.esAsociativa /]

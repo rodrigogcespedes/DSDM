@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module generateOverloadedConstructor('http://www.example.org/diagramaClasesCompleto')]
+
+[import AcceleoJavaSpring::Entity::generateParameters /]
+
+[template public generateOverloadConstructor(c : Clase)]
+	public [c.nombre/] ([generateParameters(c)/]){
+	[for (a : Atributo | c.atributos_contenidos)]
+	this.[c.atributos_contenidos.nombre/] = [c.atributos_contenidos.nombre/];
+	[/for]
+	}
+[/template]

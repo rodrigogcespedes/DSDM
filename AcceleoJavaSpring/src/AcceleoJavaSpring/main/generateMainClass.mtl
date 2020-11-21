@@ -1,0 +1,24 @@
+[comment encoding = UTF-8 /]
+[module generateMainClass('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateMainClass(raiz : DiagramaClases)]
+[file ('src/main/java/'+raiz.artefacto_contenido.grupoId+'.'+raiz.artefacto_contenido.artefactotId+'/'+'Main_'+raiz.artefacto_contenido.nombre+'.java', false, 'UTF-8')]
+package [raiz.artefacto_contenido.grupoId/].[raiz.artefacto_contenido.artefactotId/];
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "[raiz.artefacto_contenido.nombre/]", version = "[raiz.artefacto_contenido.version/]",description = "[raiz.artefacto_contenido.descripcion/]"))
+public class ['Main_'+raiz.artefacto_contenido.nombre/] {
+
+	public static void main(String['['/][']'/] args) {
+		SpringApplication.run(['Main_'+raiz.artefacto_contenido.nombre/].class, args);
+	}
+
+}
+[/file]
+[/template]

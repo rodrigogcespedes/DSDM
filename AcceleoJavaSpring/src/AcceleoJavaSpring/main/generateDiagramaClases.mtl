@@ -1,0 +1,20 @@
+[comment encoding = UTF-8 /]
+[module generateDiagramaClases('http://www.example.org/diagramaClasesCompleto')]
+
+[import AcceleoJavaSpring::Package::generatePackage /]
+[import AcceleoJavaSpring::main::generateMainClass /]
+[import AcceleoJavaSpring::repositories::generateBaseRepository /]
+[import AcceleoJavaSpring::repositories::generateRepositories /]
+[import AcceleoJavaSpring::Entity::generateBaseEntity /]
+[import AcceleoJavaSpring::services::generateBaseService /]
+[import AcceleoJavaSpring::services::generateServices /]
+[import AcceleoJavaSpring::controllers::generateBaseController /]
+[import AcceleoJavaSpring::Entity::generateInterface /]
+
+[template public generateDiagrama(raiz : DiagramaClases)]
+[comment @main/]
+[generateMainClass(raiz)/]
+[generatePackage(raiz)/]
+
+
+[/template]

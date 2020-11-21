@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[module generateEntityController('http://www.example.org/diagramaClasesCompleto')]
+
+
+[template public generateEntityController(c : Clase, art : Artefacto, p : Package)]
+[file ('src/main/java/'+art.grupoId+'.'+art.artefactotId+'/controllers/'+c.nombre+'Controller.java', false, 'UTF-8')]
+package [art.grupoId/].[art.artefactotId/].controllers;
+
+import [art.grupoId/].[art.artefactotId/].entities.[p.nombre/].[c.nombre/];
+import [art.grupoId/].[art.artefactotId/].services.[c.nombre/]ServiceImpl;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping(path = "api/v1/[c.nombre.toLowerFirst()/]")
+public class [c.nombre/]Controller extends BaseControllerImpl<[c.nombre/], [c.nombre/]ServiceImpl>{
+
+}
+[/file]
+[/template]
